@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>鲍龙云 - 高级产品管理岗</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <!-- 内联 SVG 图标定义 -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="icon-menu" viewBox="0 0 448 512">
@@ -111,6 +113,11 @@
             .transition-transform-opacity {
                 transition-property: transform, opacity;
             }
+            /* Lucide Icons样式 */
+            [data-lucide] {
+                color: inherit;
+                vertical-align: middle;
+            }
         }
     </style>
 </head>
@@ -133,7 +140,7 @@
                 </div>
                 <div class="md:hidden">
                     <button id="menu-toggle" class="text-dark hover:text-primary focus:outline-none">
-                        <svg class="w-6 h-6"><use xlink:href="#icon-menu"></use></svg>
+                        <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
             </div>
@@ -172,7 +179,7 @@
                         联系我
                     </a>
                     <a href="鲍龙云-高级产品管理岗.pdf" target="_blank" class="px-8 py-3 bg-white text-primary border border-primary font-medium rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                        下载简历
+                        下载简历 <span class="text-xs text-gray-500">(更新于2025-11-13)</span>
                     </a>
                 </div>
             </div>
@@ -188,7 +195,7 @@
             </div>
             
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-md fade-in-element">
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
                         我是一名拥有丰富经验的高级产品经理，专注于AI产品开发与用户增长策略。
                         曾主导多个成功的产品项目，在用户增长、付费转化和商业闭环构建方面有卓越表现。
@@ -196,36 +203,36 @@
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-                        <div class="flex items-start">
+                        <div class="flex items-start fade-in-element">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-primary"><use xlink:href="#icon-rocket"></use></svg>
+                                <i data-lucide="rocket" class="w-6 h-6 text-primary"></i>
                             </div>
                             <div class="ml-4">
                                 <h3 class="font-semibold text-lg mb-2">产品创新</h3>
                                 <p class="text-gray-600">擅长从0到1孵化创新产品，整合前沿技术实现商业价值</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
+                        <div class="flex items-start fade-in-element">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-primary"><use xlink:href="#icon-chart"></use></svg>
+                                <i data-lucide="bar-chart-3" class="w-6 h-6 text-primary"></i>
                             </div>
                             <div class="ml-4">
                                 <h3 class="font-semibold text-lg mb-2">用户增长</h3>
                                 <p class="text-gray-600">建立完整的增长模型，实现高效的用户获取与留存</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
+                        <div class="flex items-start fade-in-element">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-primary"><use xlink:href="#icon-handshake"></use></svg>
+                                <i data-lucide="handshake" class="w-6 h-6 text-primary"></i>
                             </div>
                             <div class="ml-4">
                                 <h3 class="font-semibold text-lg mb-2">商业变现</h3>
                                 <p class="text-gray-600">优化付费转化率，提升ARPU值，实现持续盈利增长</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
+                        <div class="flex items-start fade-in-element">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-primary"><use xlink:href="#icon-lightbulb"></use></svg>
+                                <i data-lucide="lightbulb" class="w-6 h-6 text-primary"></i>
                             </div>
                             <div class="ml-4">
                                 <h3 class="font-semibold text-lg mb-2">AI技术整合</h3>
@@ -256,12 +263,22 @@
                     <div class="relative z-10 mb-12 flex flex-col md:flex-row">
                         <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
                             <h3 class="text-xl font-semibold text-dark mb-1">AI产品经理 - 上海心海舟楫健康科技有限公司</h3>
-                            <p class="text-primary font-medium mb-3">2025.03-至今</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                            <p class="text-primary font-medium mb-3">2025.04-2025.10</p>
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
                                 <h4 class="font-medium text-gray-900 mb-2">MVP 规划与功能落地：</h4>
-                                <p class="text-gray-700 mb-4">主导需求挖掘与优先级排序，以家庭教育+心理咨询为核心，完成国内外竞品调研，完成原型架构设计；AI基座选型，搭建大模型evaluate的评价机制，数据飞轮框架设计，prompt工程相关规划及批量测试。</p>
+                                <p class="text-gray-700 mb-4">主导需求挖掘与优先级排序，针对0-10岁教育领域，以家庭教育+心理咨询为核心，完成国内外竞品调研，完成原型架构设计；AI基座选型，搭建大模型evaluate的评价机制，数据飞轮框架设计，prompt工程相关规划及批量测试。</p>
                                 <h4 class="font-medium text-gray-900 mb-2">推动 AI 工具提效：</h4>
-                                <p class="text-gray-700">用 AI 制作原型 DEMO，设计效率提升 30%；生成 8 类 160个音乐 DEMO，大幅缩短内容制作周期。</p>
+                                <p class="text-gray-700 mb-4">用 AI 制作原型 DEMO，设计效率提升 30%；利用AI工具搭建批量生成教育类歌曲工作流，完成音乐模块的内容输出，通过 "AI 音乐筛选 + 人工评审" 确定最终方案；成果：3 个月内完成小程序 MVP 上线，核心功能用户满意度 100%+。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">跨团队协同与进度管控：</h4>
+                                <p class="text-gray-700 mb-4">制定详细 Timeline，制作工期管理表格同步研发 / UI / 测试团队，组织站会与 review 会议；识别并解决研发延期、需求变更等 3 项风险，项目交付准时率 95%+。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">产品迭代与体验优化：</h4>
+                                <p class="text-gray-700 mb-4">完成 V1.0-V1.1.3 共 4 款迭代，落地 "CBT认知重构""NVC 练习卡更新" 等核心功能，优化方案详情页展示逻辑；以数据飞轮为核心理念，设计 schema 分析 prompt、音乐卡匹配机制，优化多轮对话体验，用户停留时长提升 25%。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">合规与测试保障：</h4>
+                                <p class="text-gray-700 mb-4">制定上线标准，撰写 5 + 份完整功能测试脚本，完成埋点设计与验收，BUG 修复率 98%；优化敏感词系统，修改隐私政策 / 儿童隐私协议，确保产品合规上线。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">APP 前期筹备：</h4>
+                                <p class="text-gray-700 mb-4">完成 Apple/Google Play/国内Android企业开发者账号注册（资料提交 + 付款），准备 ICP 备案、教育部教育移动互联网应用程序备案资料；</p>
+                                <h4 class="font-medium text-gray-900 mb-2">产品IP自媒体内容产出：</h4>
+                                <p class="text-gray-700">搭建产品IP的自媒体内容，多模态内容的策划，到AI工作流生产内容的实施</p>
                             </div>
                         </div>
                         <div class="md:w-1/2 md:pl-10 order-1 md:order-2 flex justify-center md:justify-start">
@@ -275,46 +292,74 @@
                         </div>
                         <div class="md:w-1/2 md:pl-10 order-1 md:order-2 mt-4 md:mt-0 pl-12 md:pl-10">
                             <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                            <h3 class="text-xl font-semibold text-dark mb-1">产品经理 - 钱咖网络科技（上海）有限公司</h3>
+                            <h3 class="text-xl font-semibold text-dark mb-1">产品总监 - 钱咖网络科技（上海）有限公司</h3>
                             <p class="text-primary font-medium mb-3">2024.06-2024.12</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">Viddo AI数字人创作平台：</h4>
-                                <p class="text-gray-700 mb-4">负责数字人产品Viddo的全流程开发，整合LLM与多模态生成技术，实现商业闭环。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">成果数据：</h4>
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                                <h4 class="font-medium text-gray-900 mb-2">业务介绍：</h4>
+                                <p class="text-gray-700 mb-4">公司由网赚类产品转型为主要从事电商服务类业务，需要从 0 到 1 搭建整个电商服务体系，专注于 TikTok 流量获取及分发，为 TikTok 电商商品引流。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">负责业务：</h4>
+                                <p class="text-gray-700 mb-4">负责市场调研和用户分析，构建用户画像，分析行业内竞争对手情况，并依据市场需求对平台功能进行优先级排序。运用大数据分析技术对用户行为进行深度挖掘，确保平台的 UI/UX 设计贴合目标用户群体需求。采用敏捷开发流程，有效管理项目进度，同时与技术、设计、市场等部门紧密协作，保障资源的有效分配。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">具体工作内容：</h4>
                                 <ul class="text-gray-700 list-disc list-inside space-y-1">
-                                    <li>6个月达成百万级下载量，月均推广ROI达1.6</li>
-                                    <li>高价值用户ARPU达$15/月</li>
-                                    <li>建立"数字人形象定制+内容创作"付费生态，付费转化率12%</li>
+                                    <li>负责 TikTok 电商赋能产品在海外上线的相关工作，涵盖 C 端 Apple store 和 google play 的 APP 产品需求规划、UI 把控以及研发进度跟进。</li>
+                                    <li>负责电商商家端 web 产品的需求、UI 设计以及研发进度管理。</li>
+                                    <li>负责 APP 及商家中台支撑管理系统的需求、UI 设计以及开发进度把控。</li>
+                                    <li>参与并主导电商带货视频的主导多模态 AI 系统集成，实现文本 - 图像 - 视频跨模态检索与生成，提高带货视频转化率。通过视频混剪去重算法，使内容重复率从 40% 降至 12%，审核通过率提升 25%。</li>
+                                    <li>进行跨部门协调与项目管理，有效协调跨部门、跨公司、跨区域的资源，把控多方联合项目，涉及与广州、厦门团队的远程沟通及协作。</li>
+                                    <li>建立 KPI 监控与预警机制，设立关键绩效指标（KPIs），如用户活跃度、转化率、留存率、视频转化率等，并搭建实时监控系统。对异常数据变化进行预警，及时发现并解决问题，以保证业务稳定运行。</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- 工作经历3: 上海影卓信息科技有限公司（VideoShow） -->
+                    <!-- 工作经历3: 上海影卓信息科技有限公司（VideoShow）高级产品经理 -->
                     <div class="relative z-10 mb-12 flex flex-col md:flex-row">
                         <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
                             <h3 class="text-xl font-semibold text-dark mb-1">高级产品经理 - 上海影卓信息科技有限公司（VideoShow）</h3>
                             <p class="text-primary font-medium mb-3">2022.03-2024.06</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
                                 <h4 class="font-medium text-gray-900 mb-2">双变现模式升级：</h4>
                                 <p class="text-gray-700 mb-3">设计订阅+广告双变现模式，通过动态定价、广告算法优化等策略，实现收益最大化。</p>
                                 <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
                                     <li>订阅端优化：设计动态定价策略，针对潜力层推出"AI功能包"限时折扣，订阅转化率提升42%</li>
-                                    <li>广告端升级：主导多平台广告SDK集成与优化，通过智能广告位管理与算法调优，广告点击率提高22%</li>
-                                    <li>双变现模式驱动VideoShow整体收益增长50%，单用户日均广告收益（ARPU）增长112%</li>
+                                    <li>广告端升级：主导多平台广告SDK（AdMob、Facebook Audience Network、AppLovin MAX）的集成与优化，通过智能广告位管理与算法调优实现变现效率提升。设计"广告频次控制算法"，平衡用户体验与收益，广告点击率（CTR）提高22%。实现多SDK聚合管理，通过瀑布流与实时竞价（Waterfall + RTB）混合模式，使填充率从75%提升至92%。</li>
+                                    <li>双变现模式驱动VideoShow整体收益增长50%，其中订阅收入占比从32%提升至51%，广告变现效率提升47%，实现单用户日均广告收益（ARPU）增长112%。</li>
                                 </ul>
                                 
-                                <h4 class="font-medium text-gray-900 mb-2">AI赋能项目：</h4>
-                                <p class="text-gray-700 mb-3">主导VideoShow视频编辑工具的AI技术赋能研究与独立产品孵化，构建"多模态视频生成框架"。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">主导AI赋能项目：</h4>
+                                <p class="text-gray-700 mb-3">主导VideoShow视频编辑工具的AI技术赋能研究与独立产品孵化，构建"多模态视频生成框架"，整合LLM（GPT-4）与Stable Diffusion，实现文本-图像-视频跨模态生成。</p>
                                 <ul class="text-gray-700 list-disc list-inside space-y-1">
-                                    <li>整合LLM(GPT-4)与Stable Diffusion，实现文本-图像-视频跨模态生成</li>
-                                    <li>主导多模态AI系统集成，实现文本-图像-视频跨模态检索与生成</li>
-                                    <li>通过视频混剪去重算法，使内容重复率从40%降至12%，审核通过率提升25%</li>
+                                    <li>完成数字人产品可行性研究，通过SWOT分析与竞品对标，确定"AI驱动的虚拟形象生成"为核心方向。</li>
+                                    <li>设计"AI视频生成工作流"，通过ComfyUI实现模型训练与部署，生成效率提升400%。</li>
+                                    <li>推出"AI视频"功能，带动VideoShow高级付费率增长50%，用户活跃度提升82.4%。</li>
+                                    <li>0-1孵化数字人产品Viddo，通过用户分层运营策略实现百万级下载量，月均推广ROI达3.2。</li>
+                                    <li>建立"AI功能模块库"，支持快速复用至其他产品线。推动技术团队与业务团队深度协作，实现从算法开发到用户增长的全链路闭环。</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="md:w-1/2 md:pl-10 order-1 md:order-2 flex justify-center md:justify-start">
                             <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 工作经历3.5: 上海影卓信息科技有限公司（VideoShow）部门负责人 -->
+                    <div class="relative z-10 mb-12 flex flex-col md:flex-row">
+                        <div class="md:w-1/2 md:pr-10 order-2 md:order-1 flex justify-center md:justify-end">
+                        </div>
+                        <div class="md:w-1/2 md:pl-10 order-1 md:order-2 mt-4 md:mt-0 pl-12 md:pl-10">
+                            <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
+                            <h3 class="text-xl font-semibold text-dark mb-1">部门负责人 - 上海影卓信息科技有限公司（VideoShow）</h3>
+                            <p class="text-primary font-medium mb-3">2020.03-2022.03</p>
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                                <h4 class="font-medium text-gray-900 mb-2">战略布局与团队管理：</h4>
+                                <p class="text-gray-700 mb-4">制定并执行公司工具类应用出海战略，以Downloader系列为核心，组建10人跨职能团队（包含产品、UI、研发人员），搭建"预研-开发-推广"全流程管理体系，推动Cast to TV、QR Scanner、Translator等5款工具应用从0到1落地，总下载量突破1000万次。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">敏捷开发与流程优化：</h4>
+                                <p class="text-gray-700 mb-4">引入敏捷开发框架（Sprint迭代），将产品从需求到上线周期缩短至平均3个月；建立OKR目标管理法，确保团队高效协作，项目交付准时率达到100%。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">全球化运营与数据驱动：</h4>
+                                <p class="text-gray-700 mb-4">基于AARRR模型制定增长策略，通过国家维度的用户画像分析（如设备、行为、付费习惯等方面），精准投放资源。主导Downloader Pro付费版开发，采用订阅制使LTV提升180%，推广ROI达2.43。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">商业价值突破：</h4>
+                                <p class="text-gray-700">带领团队超额完成年度目标200%，部门净收益同比增长150%。其中Downloader登顶12国应用商店工具榜TOP5，MAU超150万。</p>
+                            </div>
                         </div>
                     </div>
                     
@@ -326,25 +371,14 @@
                             <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
                             <h3 class="text-xl font-semibold text-dark mb-1">产品经理 - 上海影卓信息科技有限公司（VideoShow）</h3>
                             <p class="text-primary font-medium mb-3">2016.03-2020.03</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
                                 <h4 class="font-medium text-gray-900 mb-2">VideoShow全球化产品开发：</h4>
-                                <p class="text-gray-700 mb-3">主要负责视频编辑出海产品TOP5（在150多个国家排名前五）的VideoShow产品在iOS/Android、国内/海外市场的开发工作。</p>
+                                <p class="text-gray-700 mb-4">主要负责视频编辑出海产品TOP5（在150多个国家稳定排名前五）的VideoShow产品在iOS/Android、国内/海外市场的开发工作。通过精准定位与创新功能的引入，提升产品收入，并带领团队开拓国际市场。</p>
                                 <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
-                                    <li>通过精准定位与创新功能的引入，提升产品收入，并带领团队开拓国际市场</li>
-                                    <li>确保平台UI/UX设计贴合目标用户群体需求，通过多版本原型测试及A/B测试优化用户体验</li>
-                                    <li>在此期间，每月迭代1-2个版本，日活用户峰值达到450万+，月活用户峰值达到1500万+</li>
+                                    <li>确保平台UI/UX设计贴合目标用户群体需求，通过多版本原型测试及A/B测试优化用户体验。在此期间，每年超额完成年度公司北极星目标，平均达成率在150%以上。</li>
+                                    <li>主导VidCompact、Gifguru等多款海外版千万级产品从无到有的全过程（0-1），包括前期调研、功能设计、用户体验优化以及市场营销。</li>
+                                    <li>常态化使用AARRR海盗模型设计用户增长闭环，重点优化激活-留存-变现转化链路，以此指导产品决策。同时运用KANO模型进行需求优先级排序，构建必备型、期望型、魅力型功能矩阵，确保满足用户的真正需求。</li>
                                 </ul>
-                                
-                                <h4 class="font-medium text-gray-900 mb-2">全球化运营与数据驱动：</h4>
-                                <p class="text-gray-700 mb-3">基于AARRR模型制定增长策略，通过国家维度的用户画像分析，精准投放资源。</p>
-                                <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
-                                    <li>主导Downloader Pro付费版开发，采用订阅制使LTV提升180%，推广ROI达2.43</li>
-                                    <li>Downloader登顶12国应用商店工具榜TOP5，MAU超150万</li>
-                                    <li>带领团队超额完成年度目标200%，部门净收益同比增长150%</li>
-                                </ul>
-                                
-                                <h4 class="font-medium text-gray-900 mb-2">敏捷开发与流程优化：</h4>
-                                <p class="text-gray-700">引入敏捷开发框架（Sprint迭代），将产品从需求到上线周期缩短至平均3个月；建立OKR目标管理法，确保团队高效协作，项目交付准时率达到100%。</p>
                             </div>
                         </div>
                     </div>
@@ -354,12 +388,11 @@
                         <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
                             <h3 class="text-xl font-semibold text-dark mb-1">产品经理 - 上海商路网络科技有限公司</h3>
                             <p class="text-primary font-medium mb-3">2015.08-2016.02</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <p class="text-gray-700 mb-4">从3.0开始对智能测肤设备的APP进行迭代，迭代方向主要涉及电商、社区、测试功能。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">职责：</h4>
-                                <p class="text-gray-700 mb-4">分析竞品情况，并根据运营、市场的需求进行功能规划，制作原型，撰写PRD。与技术部门开会讲解并核对逻辑与原型。与UI核对UI设计界面。测试核对需求逻辑和测试环境。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">成果：</h4>
-                                <p class="text-gray-700">目前该APP已从3.0迭代到4.2，从入职（8月11日）至11月25日，用户量增长25.8%。</p>
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                                <h4 class="font-medium text-gray-900 mb-2">智能测肤设备APP迭代：</h4>
+                                <p class="text-gray-700 mb-4">主要负责智能测肤设备APP从3.0版本起的迭代规划与推进。工作涵盖电商、社区及测试功能模块，通过竞品分析、需求梳理、原型设计与PRD撰写，推动产品功能落地。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">团队协作与成果：</h4>
+                                <p class="text-gray-700">在职期间高效协同技术、UI及测试团队，保障产品顺利迭代版本。成果：目前该APP已从3.0迭代到4.2，从入职（8月11日）至11月25日，用户量增长25.8%。</p>
                             </div>
                         </div>
                         <div class="md:w-1/2 md:pl-10 order-1 md:order-2 flex justify-center md:justify-start">
@@ -373,14 +406,13 @@
                         </div>
                         <div class="md:w-1/2 md:pl-10 order-1 md:order-2 mt-4 md:mt-0 pl-12 md:pl-10">
                             <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                            <h3 class="text-xl font-semibold text-dark mb-1">CEO助理 / 运营产品经理 - 上海亿儒投资管理有限公司</h3>
-                            <p class="text-primary font-medium mb-3">2014.04-2015.08</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">CEO助理（2014.04-2015.07）：</h4>
+                            <h3 class="text-xl font-semibold text-dark mb-1">CEO助理 - 上海亿儒投资管理有限公司</h3>
+                            <p class="text-primary font-medium mb-3">2014.04-2015.07</p>
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                                <h4 class="font-medium text-gray-900 mb-2">企业方案与招商支持：</h4>
                                 <p class="text-gray-700 mb-4">负责帮助CEO制定企业方案招商手册整套文案，包括薪资机制的初稿，融资、招商、培训PPT制作，合同制定。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">运营/产品经理（2014.09-2015.08）：</h4>
-                                <p class="text-gray-700 mb-4">负责企业生鲜电商项目online/offline的市场策略和实施战略定制。负责企业线上推广，包括微信服务号、企业移动电商网站、官网架构规划。</p>
-                                <p class="text-gray-700">负责企业活动策划执行，具体包括市场竞品调查，模式规划，招商会前期策划、分配人员，微信订阅号制作宣传。</p>
+                                <h4 class="font-medium text-gray-900 mb-2">活动策划与执行：</h4>
+                                <p class="text-gray-700 mb-4">负责企业活动策划执行，具体包括市场竞品调查，模式规划，招商会前期策划、分配人员，微信订阅号制作宣传，以及帮助企业旗下餐饮进行团购对接，宣传海报规划。</p>
                             </div>
                         </div>
                     </div>
@@ -390,8 +422,9 @@
                         <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
                             <h3 class="text-xl font-semibold text-dark mb-1">城市经理 - 东芝电脑网络(上海)有限公司</h3>
                             <p class="text-primary font-medium mb-3">2012.03-2014.02</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <p class="text-gray-700 mb-4">负责杭州区的15家经销商的零售推广工作对接，负责制造畅销机型的营销、策划、执行，与AMD、INTEL、腾讯等合作商进行联合推广的具体策划执行工作。</p>
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                                <h4 class="font-medium text-gray-900 mb-2">区域市场与渠道管理：</h4>
+                                <p class="text-gray-700 mb-4">负责杭州区15家经销商的零售推广工作对接，负责制造畅销机型的营销、策划、执行，与AMD、INTEL、腾讯等合作商进行联合推广的具体策划执行工作。</p>
                                 <h4 class="font-medium text-gray-900 mb-2">成果数据：</h4>
                                 <ul class="text-gray-700 list-disc list-inside space-y-1">
                                     <li>2012年6、7、8三个月达成指标率分别为103%、112%、138%</li>
@@ -422,48 +455,67 @@
                 <!-- 项目1 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-microchip"></use></svg>
+                        <i data-lucide="brain" class="w-24 h-24 text-white opacity-80"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-dark mb-2">Viddo AI数字人创作平台</h3>
-                        <p class="text-gray-600 mb-4">整合LLM与多模态生成技术的创新型AI内容创作工具</p>
+                        <h3 class="text-xl font-semibold text-dark mb-2">家庭教育AI项目</h3>
+                        <p class="text-gray-600 mb-4">主导孵化一款面向0-10岁家庭教育的AI心理咨询Agent，融合Prompt工程与CBT/NVC心理学理论</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">AI技术</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">用户增长</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">商业变现</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">AI产品</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Prompt工程</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">家庭教育</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2023年</span>
+                            <span class="text-sm text-gray-500">2025.04-2025.09</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- 项目2 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-download"></use></svg>
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center">
+                        <i data-lucide="user" class="w-24 h-24 text-white opacity-80"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-dark mb-2">下载器工具品类开拓</h3>
-                        <p class="text-gray-600 mb-4">0-1孵化的全球化工具产品，快速实现用户增长与商业价值</p>
+                        <h3 class="text-xl font-semibold text-dark mb-2">数字人产品Viddo从0到1孵化</h3>
+                        <p class="text-gray-600 mb-4">主导AI数字人产品Viddo从0到1的孵化与商业化，整合LLM与多模态生成技术</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 text-xs font-medium bg-orange-100 text-orange-800 rounded-full">0-1项目</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">全球化</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">高ROI</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">数字人</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-pink-100 text-pink-800 rounded-full">多模态AI</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">商业化</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2020年</span>
+                            <span class="text-sm text-gray-500">2023.01-2023.12</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- 项目3 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-r from-yellow-400 to-amber-500 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-credit-card"></use></svg>
+                    <div class="h-48 bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center">
+                        <i data-lucide="download" class="w-24 h-24 text-white opacity-80"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-dark mb-2">VideoShow付费率提升项目</h3>
+                        <h3 class="text-xl font-semibold text-dark mb-2">下载器工具品类开拓与增长</h3>
+                        <p class="text-gray-600 mb-4">主导一款下载器工具产品从0到1的孵化与增长，构建IAA商业模式</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-xs font-medium bg-orange-100 text-orange-800 rounded-full">0-1项目</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">全球化</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">高ROI</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2020.01-2020.03</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目4 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-r from-yellow-400 to-amber-500 flex items-center justify-center">
+                        <i data-lucide="credit-card" class="w-24 h-24 text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark mb-2">VideoShow付费率提升专项</h3>
                         <p class="text-gray-600 mb-4">通过用户行为分析与商业模型优化，大幅提升产品盈利能力</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 text-xs font-medium bg-pink-100 text-pink-800 rounded-full">付费转化</span>
@@ -471,26 +523,26 @@
                             <span class="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">数据分析</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2019年</span>
+                            <span class="text-sm text-gray-500">2019.09-2019.12</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- 项目4 -->
+                <!-- 项目5 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 bg-gradient-to-r from-red-400 to-rose-500 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-palette"></use></svg>
+                        <i data-lucide="palette" class="w-24 h-24 text-white opacity-80"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-dark mb-2">VideoShow主题模块创新</h3>
-                        <p class="text-gray-600 mb-4">首创一键编辑功能，大幅提升用户体验与产品留存</p>
+                        <h3 class="text-xl font-semibold text-dark mb-2">VideoShow主题模块创新开发</h3>
+                        <p class="text-gray-600 mb-4">主导乐秀视频编辑工具主题模块创新开发，首创一键编辑功能</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 text-xs font-medium bg-violet-100 text-violet-800 rounded-full">用户体验</span>
                             <span class="px-3 py-1 text-xs font-medium bg-sky-100 text-sky-800 rounded-full">功能创新</span>
                             <span class="px-3 py-1 text-xs font-medium bg-lime-100 text-lime-800 rounded-full">留存优化</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2016年</span>
+                            <span class="text-sm text-gray-500">2016.09-2016.11</span>
                         </div>
                     </div>
                 </div>
@@ -511,7 +563,7 @@
                     <div class="flex flex-col md:flex-row md:items-center mb-8 pb-8 border-b border-gray-100">
                         <div class="md:w-1/4 mb-4 md:mb-0 flex justify-center md:justify-start">
                             <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-primary"><use xlink:href="#icon-graduation"></use></svg>
+                                <i data-lucide="graduation-cap" class="w-6 h-6 text-primary"></i>
                             </div>
                         </div>
                         <div class="md:w-3/4 md:pl-8">
@@ -524,15 +576,15 @@
                     <h4 class="text-lg font-semibold text-dark mb-4">资格证书</h4>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="bg-gray-50 p-4 rounded-lg text-center">
-                            <svg class="w-8 h-8 text-primary mb-2"><use xlink:href="#icon-certificate"></use></svg>
+                            <i data-lucide="award" class="w-8 h-8 text-primary mb-2"></i>
                             <p class="font-medium">PMP项目管理认证</p>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg text-center">
-                            <svg class="w-8 h-8 text-primary mb-2"><use xlink:href="#icon-language"></use></svg>
+                            <i data-lucide="languages" class="w-8 h-8 text-primary mb-2"></i>
                             <p class="font-medium">大学英语四级</p>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg text-center">
-                            <svg class="w-8 h-8 text-primary mb-2"><use xlink:href="#icon-microchip"></use></svg>
+                            <i data-lucide="cpu" class="w-8 h-8 text-primary mb-2"></i>
                             <p class="font-medium">微软人工智能工程师证书</p>
                         </div>
                     </div>
@@ -558,7 +610,7 @@
                             <div class="space-y-4">
                                 <div class="flex items-center">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                        <svg class="w-5 h-5 text-primary"><use xlink:href="#icon-envelope"></use></svg>
+                                        <i data-lucide="mail" class="w-5 h-5 text-primary"></i>
                                     </div>
                                     <div>
                                         <p class="text-sm text-gray-500">电子邮箱</p>
@@ -567,7 +619,7 @@
                                 </div>
                                 <div class="flex items-center">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                        <svg class="w-5 h-5 text-primary"><use xlink:href="#icon-phone"></use></svg>
+                                        <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
                                     </div>
                                     <div>
                                         <p class="text-sm text-gray-500">手机号码</p>
@@ -576,7 +628,7 @@
                                 </div>
                                 <div class="flex items-center">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                        <svg class="w-5 h-5 text-primary"><use xlink:href="#icon-map-marker"></use></svg>
+                                        <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
                                     </div>
                                     <div>
                                         <p class="text-sm text-gray-500">所在城市</p>
@@ -668,15 +720,15 @@
                     <h3 class="text-lg font-semibold mb-4">联系信息</h3>
                     <ul class="space-y-3">
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-3 mt-1"><use xlink:href="#icon-envelope"></use></svg>
-                            <span class="text-gray-400">example@company.com</span>
+                            <i data-lucide="mail" class="w-5 h-5 text-primary mr-3 mt-1"></i>
+                            <span class="text-gray-400">longyun.bao@foxmail.com</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-3 mt-1"><use xlink:href="#icon-phone"></use></svg>
-                            <span class="text-gray-400">138****1234</span>
+                            <i data-lucide="phone" class="w-5 h-5 text-primary mr-3 mt-1"></i>
+                            <span class="text-gray-400">17717032695</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-3 mt-1"><use xlink:href="#icon-map-marker"></use></svg>
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary mr-3 mt-1"></i>
                             <span class="text-gray-400">上海市</span>
                         </li>
                     </ul>
@@ -695,12 +747,15 @@
     </footer>
 
     <!-- 回到顶部按钮 -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 focus:outline-none">
-        <svg class="w-5 h-5"><use xlink:href="#icon-chevron-up"></use></svg>
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 focus:outline-none z-20">
+        <i data-lucide="chevron-up" class="w-5 h-5"></i>
     </button>
 
     <!-- JavaScript -->
     <script>
+        // 初始化Lucide图标
+        lucide.createIcons();
+        
         // 移动端菜单切换
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -785,6 +840,9 @@
         
         // 项目卡片动画
         const projectCards = document.querySelectorAll('#projects .bg-gray-50');
+        // 工作经历卡片动画
+        const experienceCards = document.querySelectorAll('#experience .bg-white.rounded-xl');
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -798,6 +856,15 @@
         
         projectCards.forEach(card => {
             card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+        
+        // 工作经历卡片动画
+        experienceCards.forEach(card => {
+            // 为工作经历卡片添加初始动画类（如果尚未添加）
+            if (!card.classList.contains('opacity-0')) {
+                card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            }
             observer.observe(card);
         });
     </script>
