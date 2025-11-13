@@ -559,7 +559,7 @@
             </div>
             
             <div class="max-w-3xl mx-auto">
-                <div class="bg-white rounded-xl p-8 shadow-md">
+                <div class="bg-white rounded-xl p-8 shadow-md opacity-0 translate-y-10 transition-all duration-700">
                     <div class="flex flex-col md:flex-row md:items-center mb-8 pb-8 border-b border-gray-100">
                         <div class="md:w-1/4 mb-4 md:mb-0 flex justify-center md:justify-start">
                             <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
@@ -841,7 +841,11 @@
         // 项目卡片动画
         const projectCards = document.querySelectorAll('#projects .bg-gray-50');
         // 工作经历卡片动画
-        const experienceCards = document.querySelectorAll('#experience .bg-white.rounded-xl');
+        const experienceCards = document.querySelectorAll('#experience .bg-white.p-6.rounded-xl');
+        // 教育背景模块动画
+        const educationCards = document.querySelectorAll('#education .bg-white.rounded-xl');
+        // 关于我模块动画
+        const aboutElements = document.querySelectorAll('#about .fade-in-element');
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -864,8 +868,29 @@
             // 为工作经历卡片添加初始动画类（如果尚未添加）
             if (!card.classList.contains('opacity-0')) {
                 card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            } else {
+                // 确保所有必要的动画类都存在
+                card.classList.add('translate-y-10', 'transition-all', 'duration-700');
             }
             observer.observe(card);
+        });
+        
+        // 教育背景模块动画
+        educationCards.forEach(card => {
+            // 为教育背景卡片添加初始动画类（如果尚未添加）
+            if (!card.classList.contains('opacity-0')) {
+                card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            } else {
+                // 确保所有必要的动画类都存在
+                card.classList.add('translate-y-10', 'transition-all', 'duration-700');
+            }
+            observer.observe(card);
+        });
+        
+        // 关于我模块动画
+        aboutElements.forEach(element => {
+            element.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(element);
         });
     </script>
 </body>
