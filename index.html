@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>鲍龙云 - 高级产品管理岗</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <!-- 内联 SVG 图标定义 -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -49,7 +48,25 @@
         <symbol id="icon-language" viewBox="0 0 512 512">
             <path fill="currentColor" d="M0 256.01c0 137 111 248 248 248s248-111 248-248S393 8.01 256 8.01 8 119 8 256.01zm330.26 149.35c-53.09 31.4-114.22 48.62-176.52 48.62-170.29 0-308-137.7-308-308 0-15.66 1.26-31.15 3.67-46.43L185.47 357.39c29.27-15.22 60.93-23.5 93.57-23.5 20.28 0 40.23 3.23 59.22 9.46zM452.32 225.36l-215.37-123.9C256.47 85.55 280.62 80 305.33 80c165.06 0 299 133.92 299 299 0 14.17-1.04 28.22-3.08 42.06L452.32 225.36z"></path>
         </symbol>
+        <symbol id="icon-mail" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path>
+        </symbol>
+        <symbol id="icon-map-pin" viewBox="0 0 384 512">
+            <path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+        </symbol>
+        <symbol id="icon-chevron-up" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m18 15-6-6-6 6"></path>
+        </symbol>
         <symbol id="icon-microchip" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M400 32H112C60.2 32 20 66.9 20 112v288c0 45.1 40.2 80 92 80h288c51.8 0 92-34.9 92-80V112c0-45.1-40.2-80-92-80zm-16 32h32c26.4 0 48 19.2 48 43.7V128H384V64zm-64 0h32v64H320V64zm-64 0h32v64H256V64zm-64 0h32v64H192V64zm-64 0h32c-1.1 14.2-1.6 25.7-1.6 32s.5 17.8 1.6 32H84c-26.4 0-48-19.2-48-43.7V95.7C36 71.2 57.6 52 84 52h32v12zM68 160c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM68 208c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM68 256c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM68 304c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM68 352c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM256 160c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32V192c0-17.7-14.3-32-32-32zm0 32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16s-16-7.2-16-16v-64c0-8.8 7.2-16 16-16zM44 416c0-26.4 19.2-48 43.7-48H88v64H84c-26.4 0-48-19.2-48-43.7V416zm128 0h-32v-64h32v64zm64 0h-32v-64h32v64zm64 0h-32v-64h32v64zm64 0h32c-1.1-14.2-1.6-25.7-1.6-32s.5-17.8 1.6-32h-32v64z"></path>
+        </symbol>
+        <symbol id="icon-palette" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M256 32c123.5 0 223.4 100.3 223.4 224S379.5 480 256 480 32.6 379.7 32.6 256 132.5 32 256 32zm0 32c-105.9 0-192 86.4-192 192 0 105.9 86.1 192 192 192 105.9 0 192-86.1 192-192 0-105.6-86.1-192-192-192zm96 224c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm-96 0c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm96-96c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm-96 0c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32z"></path>
+        </symbol>
+        <symbol id="icon-certificate" viewBox="0 0 640 512">
             <path fill="currentColor" d="M480 32H32C14.3 32 0 46.3 0 64v384c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM192 448H96v-64h96v64zm0-128H96v-64h96v64zm0-128H96V96h96v96zm160 256h-96v-64h96v64zm0-128h-96v-64h96v64zm0-128h-96V96h96v96z"></path>
             <path fill="currentColor" d="M352 416c-17.6 0-32-14.4-32-32s14.4-32 32-32s32 14.4 32 32s-14.4 32-32 32zm0-128c-17.6 0-32-14.4-32-32s14.4-32 32-32s32 14.4 32 32s-14.4 32-32 32zm0-128c-17.6 0-32-14.4-32-32s14.4-32 32-32s32 14.4 32 32s-14.4 32-32 32z"></path>
         </symbol>
@@ -113,17 +130,13 @@
             .transition-transform-opacity {
                 transition-property: transform, opacity;
             }
-            /* Lucide Icons样式 */
-            [data-lucide] {
-                color: inherit;
-                vertical-align: middle;
-            }
+
         }
     </style>
 </head>
 <body class="bg-light text-dark font-sans">
     <!-- 导航栏 -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -140,7 +153,9 @@
                 </div>
                 <div class="md:hidden">
                     <button id="menu-toggle" class="text-dark hover:text-primary focus:outline-none">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <use xlink:href="#icon-menu"></use>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -195,44 +210,52 @@
             </div>
             
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-50 rounded-2xl p-8 shadow-md fade-in-element">
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        我是一名拥有丰富经验的高级产品经理，专注于AI产品开发与用户增长策略。
+                    我是一名拥有丰富经验的高级产品经理，专注于AI产品开发与用户增长策略。
                         曾主导多个成功的产品项目，在用户增长、付费转化和商业闭环构建方面有卓越表现。
                         擅长通过数据驱动的方式优化产品体验，实现业务目标。
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-                        <div class="flex items-start fade-in-element">
+                        <div class="flex items-start">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <i data-lucide="rocket" class="w-6 h-6 text-primary"></i>
+                                <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <use xlink:href="#icon-rocket"></use>
+                                </svg>
                             </div>
                             <div class="ml-4">
                                 <h3 class="font-semibold text-lg mb-2">产品创新</h3>
                                 <p class="text-gray-600">擅长从0到1孵化创新产品，整合前沿技术实现商业价值</p>
                             </div>
                         </div>
-                        <div class="flex items-start fade-in-element">
+                        <div class="flex items-start">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <i data-lucide="bar-chart-3" class="w-6 h-6 text-primary"></i>
+                                <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <use xlink:href="#icon-chart"></use>
+                                </svg>
                             </div>
                             <div class="ml-4">
                                 <h3 class="font-semibold text-lg mb-2">用户增长</h3>
                                 <p class="text-gray-600">建立完整的增长模型，实现高效的用户获取与留存</p>
                             </div>
                         </div>
-                        <div class="flex items-start fade-in-element">
+                        <div class="flex items-start">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <i data-lucide="handshake" class="w-6 h-6 text-primary"></i>
+                                <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <use xlink:href="#icon-handshake"></use>
+                                </svg>
                             </div>
                             <div class="ml-4">
                                 <h3 class="font-semibold text-lg mb-2">商业变现</h3>
                                 <p class="text-gray-600">优化付费转化率，提升ARPU值，实现持续盈利增长</p>
                             </div>
                         </div>
-                        <div class="flex items-start fade-in-element">
+                        <div class="flex items-start">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <i data-lucide="lightbulb" class="w-6 h-6 text-primary"></i>
+                                <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <use xlink:href="#icon-lightbulb"></use>
+                                </svg>
                             </div>
                             <div class="ml-4">
                                 <h3 class="font-semibold text-lg mb-2">AI技术整合</h3>
@@ -264,7 +287,7 @@
                         <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
                             <h3 class="text-xl font-semibold text-dark mb-1">AI产品经理 - 上海心海舟楫健康科技有限公司</h3>
                             <p class="text-primary font-medium mb-3">2025.04-2025.10</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                                 <h4 class="font-medium text-gray-900 mb-2">MVP 规划与功能落地：</h4>
                                 <p class="text-gray-700 mb-4">主导需求挖掘与优先级排序，针对0-10岁教育领域，以家庭教育+心理咨询为核心，完成国内外竞品调研，完成原型架构设计；AI基座选型，搭建大模型evaluate的评价机制，数据飞轮框架设计，prompt工程相关规划及批量测试。</p>
                                 <h4 class="font-medium text-gray-900 mb-2">推动 AI 工具提效：</h4>
@@ -294,7 +317,7 @@
                             <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
                             <h3 class="text-xl font-semibold text-dark mb-1">产品总监 - 钱咖网络科技（上海）有限公司</h3>
                             <p class="text-primary font-medium mb-3">2024.06-2024.12</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                                 <h4 class="font-medium text-gray-900 mb-2">业务介绍：</h4>
                                 <p class="text-gray-700 mb-4">公司由网赚类产品转型为主要从事电商服务类业务，需要从 0 到 1 搭建整个电商服务体系，专注于 TikTok 流量获取及分发，为 TikTok 电商商品引流。</p>
                                 <h4 class="font-medium text-gray-900 mb-2">负责业务：</h4>
@@ -317,7 +340,7 @@
                         <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
                             <h3 class="text-xl font-semibold text-dark mb-1">高级产品经理 - 上海影卓信息科技有限公司（VideoShow）</h3>
                             <p class="text-primary font-medium mb-3">2022.03-2024.06</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                                 <h4 class="font-medium text-gray-900 mb-2">双变现模式升级：</h4>
                                 <p class="text-gray-700 mb-3">设计订阅+广告双变现模式，通过动态定价、广告算法优化等策略，实现收益最大化。</p>
                                 <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
@@ -350,7 +373,7 @@
                             <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
                             <h3 class="text-xl font-semibold text-dark mb-1">部门负责人 - 上海影卓信息科技有限公司（VideoShow）</h3>
                             <p class="text-primary font-medium mb-3">2020.03-2022.03</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                                 <h4 class="font-medium text-gray-900 mb-2">战略布局与团队管理：</h4>
                                 <p class="text-gray-700 mb-4">制定并执行公司工具类应用出海战略，以Downloader系列为核心，组建10人跨职能团队（包含产品、UI、研发人员），搭建"预研-开发-推广"全流程管理体系，推动Cast to TV、QR Scanner、Translator等5款工具应用从0到1落地，总下载量突破1000万次。</p>
                                 <h4 class="font-medium text-gray-900 mb-2">敏捷开发与流程优化：</h4>
@@ -371,7 +394,7 @@
                             <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
                             <h3 class="text-xl font-semibold text-dark mb-1">产品经理 - 上海影卓信息科技有限公司（VideoShow）</h3>
                             <p class="text-primary font-medium mb-3">2016.03-2020.03</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                                 <h4 class="font-medium text-gray-900 mb-2">VideoShow全球化产品开发：</h4>
                                 <p class="text-gray-700 mb-4">主要负责视频编辑出海产品TOP5（在150多个国家稳定排名前五）的VideoShow产品在iOS/Android、国内/海外市场的开发工作。通过精准定位与创新功能的引入，提升产品收入，并带领团队开拓国际市场。</p>
                                 <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
@@ -388,7 +411,7 @@
                         <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
                             <h3 class="text-xl font-semibold text-dark mb-1">产品经理 - 上海商路网络科技有限公司</h3>
                             <p class="text-primary font-medium mb-3">2015.08-2016.02</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                                 <h4 class="font-medium text-gray-900 mb-2">智能测肤设备APP迭代：</h4>
                                 <p class="text-gray-700 mb-4">主要负责智能测肤设备APP从3.0版本起的迭代规划与推进。工作涵盖电商、社区及测试功能模块，通过竞品分析、需求梳理、原型设计与PRD撰写，推动产品功能落地。</p>
                                 <h4 class="font-medium text-gray-900 mb-2">团队协作与成果：</h4>
@@ -408,7 +431,7 @@
                             <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
                             <h3 class="text-xl font-semibold text-dark mb-1">CEO助理 - 上海亿儒投资管理有限公司</h3>
                             <p class="text-primary font-medium mb-3">2014.04-2015.07</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                                 <h4 class="font-medium text-gray-900 mb-2">企业方案与招商支持：</h4>
                                 <p class="text-gray-700 mb-4">负责帮助CEO制定企业方案招商手册整套文案，包括薪资机制的初稿，融资、招商、培训PPT制作，合同制定。</p>
                                 <h4 class="font-medium text-gray-900 mb-2">活动策划与执行：</h4>
@@ -422,7 +445,7 @@
                         <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
                             <h3 class="text-xl font-semibold text-dark mb-1">城市经理 - 东芝电脑网络(上海)有限公司</h3>
                             <p class="text-primary font-medium mb-3">2012.03-2014.02</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 opacity-0 translate-y-10 transition-all duration-700">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                                 <h4 class="font-medium text-gray-900 mb-2">区域市场与渠道管理：</h4>
                                 <p class="text-gray-700 mb-4">负责杭州区15家经销商的零售推广工作对接，负责制造畅销机型的营销、策划、执行，与AMD、INTEL、腾讯等合作商进行联合推广的具体策划执行工作。</p>
                                 <h4 class="font-medium text-gray-900 mb-2">成果数据：</h4>
@@ -455,7 +478,7 @@
                 <!-- 项目1 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center">
-                        <i data-lucide="brain" class="w-24 h-24 text-white opacity-80"></i>
+                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-lightbulb"></use></svg>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-dark mb-2">家庭教育AI项目</h3>
@@ -474,7 +497,7 @@
                 <!-- 项目2 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center">
-                        <i data-lucide="user" class="w-24 h-24 text-white opacity-80"></i>
+                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-robot"></use></svg>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-dark mb-2">数字人产品Viddo从0到1孵化</h3>
@@ -493,7 +516,7 @@
                 <!-- 项目3 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center">
-                        <i data-lucide="download" class="w-24 h-24 text-white opacity-80"></i>
+                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-download"></use></svg>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-dark mb-2">下载器工具品类开拓与增长</h3>
@@ -512,7 +535,7 @@
                 <!-- 项目4 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 bg-gradient-to-r from-yellow-400 to-amber-500 flex items-center justify-center">
-                        <i data-lucide="credit-card" class="w-24 h-24 text-white opacity-80"></i>
+                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-credit-card"></use></svg>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-dark mb-2">VideoShow付费率提升专项</h3>
@@ -531,7 +554,7 @@
                 <!-- 项目5 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-48 bg-gradient-to-r from-red-400 to-rose-500 flex items-center justify-center">
-                        <i data-lucide="palette" class="w-24 h-24 text-white opacity-80"></i>
+                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-palette"></use></svg>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-dark mb-2">VideoShow主题模块创新开发</h3>
@@ -559,11 +582,11 @@
             </div>
             
             <div class="max-w-3xl mx-auto">
-                <div class="bg-white rounded-xl p-8 shadow-md opacity-0 translate-y-10 transition-all duration-700">
+                <div class="bg-white rounded-xl p-8 shadow-md">
                     <div class="flex flex-col md:flex-row md:items-center mb-8 pb-8 border-b border-gray-100">
                         <div class="md:w-1/4 mb-4 md:mb-0 flex justify-center md:justify-start">
                             <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                                <i data-lucide="graduation-cap" class="w-6 h-6 text-primary"></i>
+                                <svg class="w-6 h-6 text-primary"><use xlink:href="#icon-graduation"></use></svg>
                             </div>
                         </div>
                         <div class="md:w-3/4 md:pl-8">
@@ -576,15 +599,15 @@
                     <h4 class="text-lg font-semibold text-dark mb-4">资格证书</h4>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="bg-gray-50 p-4 rounded-lg text-center">
-                            <i data-lucide="award" class="w-8 h-8 text-primary mb-2"></i>
+                            <svg class="w-8 h-8 text-primary mb-2"><use xlink:href="#icon-certificate"></use></svg>
                             <p class="font-medium">PMP项目管理认证</p>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg text-center">
-                            <i data-lucide="languages" class="w-8 h-8 text-primary mb-2"></i>
+                            <svg class="w-8 h-8 text-primary mb-2"><use xlink:href="#icon-language"></use></svg>
                             <p class="font-medium">大学英语四级</p>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg text-center">
-                            <i data-lucide="cpu" class="w-8 h-8 text-primary mb-2"></i>
+                            <svg class="w-8 h-8 text-primary mb-2"><use xlink:href="#icon-microchip"></use></svg>
                             <p class="font-medium">微软人工智能工程师证书</p>
                         </div>
                     </div>
@@ -610,7 +633,7 @@
                             <div class="space-y-4">
                                 <div class="flex items-center">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                        <i data-lucide="mail" class="w-5 h-5 text-primary"></i>
+                                        <svg class="w-5 h-5 text-primary"><use xlink:href="#icon-mail"></use></svg>
                                     </div>
                                     <div>
                                         <p class="text-sm text-gray-500">电子邮箱</p>
@@ -619,7 +642,7 @@
                                 </div>
                                 <div class="flex items-center">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                        <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                                        <svg class="w-5 h-5 text-primary"><use xlink:href="#icon-phone"></use></svg>
                                     </div>
                                     <div>
                                         <p class="text-sm text-gray-500">手机号码</p>
@@ -628,7 +651,7 @@
                                 </div>
                                 <div class="flex items-center">
                                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                        <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+                                        <svg class="w-5 h-5 text-primary"><use xlink:href="#icon-map-pin"></use></svg>
                                     </div>
                                     <div>
                                         <p class="text-sm text-gray-500">所在城市</p>
@@ -720,15 +743,15 @@
                     <h3 class="text-lg font-semibold mb-4">联系信息</h3>
                     <ul class="space-y-3">
                         <li class="flex items-start">
-                            <i data-lucide="mail" class="w-5 h-5 text-primary mr-3 mt-1"></i>
+                            <svg class="w-5 h-5 text-primary mr-3 mt-1"><use xlink:href="#icon-mail"></use></svg>
                             <span class="text-gray-400">longyun.bao@foxmail.com</span>
                         </li>
                         <li class="flex items-start">
-                            <i data-lucide="phone" class="w-5 h-5 text-primary mr-3 mt-1"></i>
+                            <svg class="w-5 h-5 text-primary mr-3 mt-1"><use xlink:href="#icon-phone"></use></svg>
                             <span class="text-gray-400">17717032695</span>
                         </li>
                         <li class="flex items-start">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-primary mr-3 mt-1"></i>
+                            <svg class="w-5 h-5 text-primary mr-3 mt-1"><use xlink:href="#icon-map-pin"></use></svg>
                             <span class="text-gray-400">上海市</span>
                         </li>
                     </ul>
@@ -748,13 +771,12 @@
 
     <!-- 回到顶部按钮 -->
     <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 focus:outline-none z-20">
-        <i data-lucide="chevron-up" class="w-5 h-5"></i>
+        <svg class="w-5 h-5"><use xlink:href="#icon-chevron-up"></use></svg>
     </button>
 
     <!-- JavaScript -->
     <script>
-        // 初始化Lucide图标
-        lucide.createIcons();
+        // SVG图标不需要初始化
         
         // 移动端菜单切换
         const menuToggle = document.getElementById('menu-toggle');
@@ -840,13 +862,6 @@
         
         // 项目卡片动画
         const projectCards = document.querySelectorAll('#projects .bg-gray-50');
-        // 工作经历卡片动画
-        const experienceCards = document.querySelectorAll('#experience .bg-white.p-6.rounded-xl');
-        // 教育背景模块动画
-        const educationCards = document.querySelectorAll('#education .bg-white.rounded-xl');
-        // 关于我模块动画
-        const aboutElements = document.querySelectorAll('#about .fade-in-element');
-        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -861,36 +876,6 @@
         projectCards.forEach(card => {
             card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
             observer.observe(card);
-        });
-        
-        // 工作经历卡片动画
-        experienceCards.forEach(card => {
-            // 为工作经历卡片添加初始动画类（如果尚未添加）
-            if (!card.classList.contains('opacity-0')) {
-                card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
-            } else {
-                // 确保所有必要的动画类都存在
-                card.classList.add('translate-y-10', 'transition-all', 'duration-700');
-            }
-            observer.observe(card);
-        });
-        
-        // 教育背景模块动画
-        educationCards.forEach(card => {
-            // 为教育背景卡片添加初始动画类（如果尚未添加）
-            if (!card.classList.contains('opacity-0')) {
-                card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
-            } else {
-                // 确保所有必要的动画类都存在
-                card.classList.add('translate-y-10', 'transition-all', 'duration-700');
-            }
-            observer.observe(card);
-        });
-        
-        // 关于我模块动画
-        aboutElements.forEach(element => {
-            element.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
-            observer.observe(element);
         });
     </script>
 </body>
