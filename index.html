@@ -1,258 +1,335 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鲍龙云 - 高级产品管理岗</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <!-- 内联 SVG 图标定义 -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="icon-menu" viewBox="0 0 448 512">
-            <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
-        </symbol>
-        <symbol id="icon-user" viewBox="0 0 448 512">
-            <path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path>
-        </symbol>
-        <symbol id="icon-rocket" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M245.6 20.8c3.7-10.8 16.7-10.8 20.4 0l21.6 63.1 66.2 18.6c10.2 2.9 14.8 14.6 8.6 22.7L288 192l46.3 46.3c8.1 8.1 9.8 20.7 2.7 29.6l-18.6 32.1c-2.4 4.2-3.8 8.9-3.8 13.8c0 17.7 14.4 32 32 32c4.9 0 9.6-1.4 13.8-3.8l32.1-18.6c8.9-7.1 21.5-5.4 29.6 2.7L416 320l64.8-56.6c8.1-6.2 19.8-1.6 22.7 8.6l18.6 66.2 63.1 21.6c10.8 3.7 10.8 16.7 0 20.4l-54.5 18.4c-3.1 1.1-6.3 1.6-9.6 1.6c-7.9 0-15.7-3.2-21.2-9.1L352 416l-56.6 64.8c-6.2 8.1-17.9 12.7-29.6 8.6l-66.2-18.6c-4.2-2.4-8.9-3.8-13.8-3.8c-17.7 0-32 14.4-32 32c0 3.3 0.6 6.5 1.6 9.6L135 520.5c-3.7 10.8-16.7 10.8-20.4 0L51.5 466c-10.8-3.7-10.8-16.7 0-20.4l21.6-63.1-18.6-66.2c-2.9-10.2-1.6-22.7 8.6-29.6L128 288 81.7 241.7c-8.1-8.1-9.8-20.7-2.7-29.6l18.6-32.1c2.4-4.2 3.8-8.9 3.8-13.8c0-17.7-14.4-32-32-32c-4.9 0-9.6 1.4-13.8 3.8L2.5 180.5C-4.6 188.6-6.3 201.2 .8 209.6L65.6 266l21.6-63.1c3.7-10.8 16.7-10.8 20.4 0l63.1 21.6 18.6 66.2c2.9 10.2 14.6 14.8 22.7 8.6L256 288l-46.3-46.3c-8.1-8.1-9.8-20.7-2.7-29.6l18.6-32.1c2.4-4.2 3.8-8.9 3.8-13.8c0-17.7 14.4-32 32-32c4.9 0 9.6 1.4 13.8 3.8l32.1 18.6c8.9 7.1 21.5 5.4 29.6-2.7L352 160l64.8 56.6c8.1 6.2 19.8 1.6 22.7-8.6l18.6-66.2 63.1-21.6c10.8-3.7 10.8-16.7 0-20.4L450.5 51.5c-3.7-10.8-16.7-10.8-20.4 0L365 105c-10.8 3.7-10.8 16.7 0 20.4l21.6 63.1-18.6 66.2c-2.9 10.2-14.6 14.8-22.7 8.6L320 192l-46.3 46.3c-8.1 8.1-9.8 20.7-2.7 29.6l18.6 32.1c2.4 4.2 3.8 8.9 3.8 13.8c0 17.7-14.4 32-32 32c-4.9 0-9.6-1.4-13.8-3.8l-32.1-18.6c-8.9-7.1-21.5-5.4-29.6 2.7L192 352l-64.8-56.6c-8.1-6.2-19.8-1.6-29.6 8.6l-66.2 18.6c-4.2 2.4-8.9 3.8-13.8 3.8c-17.7 0-32-14.4-32-32c0-3.3 0.6-6.5 1.6-9.6L51.5 305.5c3.7-10.8 16.7-10.8 20.4 0l63.1 21.6 18.6-66.2c2.9-10.2 14.6-14.8 22.7-8.6L160 288l46.3-46.3c8.1-8.1 9.8-20.7 2.7-29.6l-18.6-32.1c-2.4-4.2-3.8-8.9-3.8-13.8c0-17.7 14.4-32 32-32c4.9 0 9.6 1.4 13.8 3.8l32.1 18.6c8.9 7.1 21.5 5.4 29.6-2.7L288 160l-64.8-56.6c-6.2-8.1-17.9-12.7-29.6-8.6l-66.2 18.6c-4.2 2.4-8.9 3.8-13.8 3.8c-17.7 0-32-14.4-32-32c0-3.3 0.6-6.5 1.6-9.6L51.5 51.5C58.6 43.4 71.2 41.7 79.6 48.8L135 105l21.6-63.1c3.7-10.8 16.7-10.8 20.4 0l54.5 18.4c1.1 3.1 1.6 6.3 1.6 9.6c0 7.9-3.2 15.7-9.1 21.2L192 128l-46.3 46.3c-8.1 8.1-9.8 20.7-2.7 29.6l18.6 32.1c2.4 4.2 3.8 8.9 3.8 13.8c0 17.7-14.4 32-32 32c-4.9 0-9.6 1.4-13.8 3.8L6.3 294.3c-7.1 4-11.1 12.4-10.1 21.2c1 8.8 7.7 16 16.5 16c3.3 0 6.5-0.6 9.6-1.6L65.6 320l21.6 63.1c3.7 10.8 16.7 10.8 20.4 0l63.1-21.6 18.6-66.2c2.9-10.2 14.6-14.8 22.7-8.6L192 320l46.3-46.3c8.1-8.1 9.8-20.7 2.7-29.6l-18.6-32.1c-2.4-4.2-3.8-8.9-3.8-13.8c0-17.7 14.4-32 32-32c4.9 0 9.6 1.4 13.8 3.8l32.1 18.6c8.9 7.1 21.5 5.4 29.6-2.7L320 192l64.8 56.6c8.1 6.2 19.8 1.6 22.7-8.6l18.6-66.2 63.1-21.6c10.8-3.7 10.8-16.7 0-20.4L450.5 51.5c-10.8-3.7-10.8-16.7 0-20.4l54.5-18.4c8.8-3 16 7.7 13 16.5c-1 8.8-7.7 16-16.5 16c-3.3 0-6.5-0.6-9.6-1.6L416 48l-21.6-63.1c-3.7-10.8-16.7-10.8-20.4 0l-63.1 21.6-18.6 66.2c-2.9 10.2-14.6 14.8-22.7 8.6L288 80l-46.3 46.3c-8.1 8.1-9.8 20.7-2.7 29.6l18.6 32.1c2.4 4.2 3.8 8.9 3.8 13.8c0 17.7-14.4 32-32 32c-4.9 0-9.6-1.4-13.8-3.8l-32.1-18.6c-8.9-7.1-21.5-5.4-29.6 2.7L160 160l-64.8-56.6c-8.1-6.2-19.8-1.6-29.6 8.6l-66.2 18.6c-4.2 2.4-8.9 3.8-13.8 3.8c-17.7 0-32-14.4-32-32c0-3.3 0.6-6.5 1.6-9.6L2.5 97.5C-4.6 89.4-6.3 76.8 0.8 68.4L65.6 12l21.6 63.1c3.7 10.8 16.7 10.8 20.4 0l54.5-18.4c1.1 3.1 1.6 6.3 1.6 9.6c0 7.9-3.2 15.7-9.1 21.2L160 80l-46.3 46.3c-8.1 8.1-9.8 20.7-2.7 29.6l18.6 32.1c2.4 4.2 3.8 8.9 3.8 13.8c0 17.7-14.4 32-32 32c-4.9 0-9.6 1.4-13.8 3.8L6.3 235.3c-7.1 4-11.1 12.4-10.1 21.2c1 8.8 7.7 16 16.5 16c3.3 0 6.5-0.6 9.6-1.6L65.6 256l21.6 63.1c3.7 10.8 16.7 10.8 20.4 0l63.1-21.6 18.6-66.2c2.9-10.2 14.6-14.8 22.7-8.6L192 256l46.3-46.3c8.1-8.1 9.8-20.7 2.7-29.6l-18.6-32.1c-2.4-4.2-3.8-8.9-3.8-13.8c0-17.7 14.4-32 32-32c4.9 0 9.6 1.4 13.8 3.8l32.1 18.6c8.9 7.1 21.5 5.4 29.6-2.7L320 128l64.8 56.6c8.1 6.2 19.8 1.6 22.7-8.6l18.6-66.2 63.1-21.6c10.8-3.7 10.8-16.7 0-20.4L450.5 1.5C446.8-9.3 433.8-9.3 429.1 1.5L365 51c-10.8 3.7-10.8 16.7 0 20.4l21.6 63.1-18.6 66.2c-2.9 10.2-14.6 14.8-22.7 8.6L320 128l-46.3 46.3c-8.1 8.1-9.8 20.7-2.7 29.6l18.6 32.1c2.4 4.2 3.8 8.9 3.8 13.8c0 17.7-14.4 32-32 32c-4.9 0 9.6 1.4 13.8 3.8l32.1 18.6c8.9 7.1 21.5 5.4 29.6-2.7L352 224l64.8-56.6c8.1-6.2 19.8-1.6 22.7 8.6l18.6 66.2 63.1 21.6c10.8 3.7 10.8 16.7 0 20.4l-54.5 18.4c-3.1 1.1-6.3 1.6-9.6 1.6c-7.9 0-15.7-3.2-21.2-9.1L352 256l-56.6 64.8c-6.2 8.1-17.9 12.7-29.6 8.6l-66.2-18.6c-4.2-2.4-8.9-3.8-13.8-3.8c-17.7 0-32 14.4-32 32c0 3.3 0.6 6.5 1.6 9.6L135 468.5c3.7 10.8 16.7 10.8 20.4 0L199 418c10.8-3.7 10.8-16.7 0-20.4l-21.6-63.1 18.6-66.2c2.9-10.2 14.6-14.8 22.7-8.6L224 288l46.3-46.3c8.1-8.1 9.8-20.7 2.7-29.6l-18.6-32.1c-2.4-4.2-3.8-8.9-3.8-13.8c0-17.7 14.4-32 32-32c4.9 0 9.6 1.4 13.8 3.8l32.1 18.6c8.9 7.1 21.5 5.4 29.6-2.7L320 192l64.8 56.6c8.1 6.2 19.8 1.6 22.7-8.6l18.6-66.2 63.1-21.6c10.8-3.7 10.8-16.7 0-20.4L450.5 51.5c-3.7-10.8-16.7-10.8-20.4 0L365 105c-10.8 3.7-10.8 16.7 0 20.4l21.6 63.1-18.6 66.2c-2.9 10.2-14.6 14.8-22.7 8.6L320 192l-46.3 46.3c-8.1 8.1-9.8 20.7-2.7 29.6l18.6 32.1c2.4 4.2 3.8 8.9 3.8 13.8c0 17.7-14.4 32-32 32c-4.9 0 9.6-1.4 13.8-3.8l32.1-18.6c8.9 7.1 21.5 5.4 29.6-2.7L352 288l64.8-56.6c8.1-6.2 19.8-1.6 22.7 8.6l18.6 66.2 63.1 21.6c10.8 3.7 10.8 16.7 0 20.4l-54.5 18.4c-3.1 1.1-6.3 1.6-9.6 1.6c-7.9 0-15.7-3.2-21.2-9.1L352 320l-56.6 64.8c-6.2 8.1-17.9 12.7-29.6 8.6l-66.2-18.6c-4.2-2.4-8.9-3.8-13.8-3.8c-17.7 0-32 14.4-32 32c0 3.3 0.6 6.5 1.6 9.6L135 468.5c3.7 10.8 16.7 10.8 20.4 0l54.5-18.4c10.8-3.7 10.8-16.7 0-20.4l-21.6-63.1 18.6-66.2c2.9-10.2 14.6-14.8 22.7-8.6L224 288z"></path>
-        </symbol>
-        <symbol id="icon-chart" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M396.8 352H256V212.8c0-14.4-17.3-21.6-27.3-11.3l-44.8 44.8c-6.2 6.3-16.4 6.3-22.6 0l-43.2-43.2c-10-10-2.7-27.3 11.3-27.3H396.8c14.4 0 25.6 11.2 25.6 25.6v140.8c0 14.4-11.2 25.6-25.6 25.6z"></path>
-            <path fill="currentColor" d="M224 416c-35.3 0-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64s-28.7-64-64-64zM96 352H64c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32v-96c0-17.7-14.3-32-32-32zm352 0h-32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32v-96c0-17.7-14.3-32-32-32z"></path>
-        </symbol>
-        <symbol id="icon-handshake" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M496 160c0-8.8-7.2-16-16-16H288V80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64H32c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-32c0-8.8 7.2-16 16-16h307.2c11.2 0 21.5-6.1 26.6-16l54.6-109.3c3.8-7.5 3.8-16.4 0-23.9L494.6 192c-5.1-9.9-15.4-16-26.6-16H400c-8.8 0-16-7.2-16-16s7.2-16 16-16h80zM288 272H192c-8.8 0-16 7.2-16 16s7.2 16 16 16h96c8.8 0 16-7.2 16-16s-7.2-16-16-16z"></path>
-        </symbol>
-        <symbol id="icon-lightbulb" viewBox="0 0 352 512">
-            <path fill="currentColor" d="M176 80c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16h48v48c0 8.8 7.2 16 16 16s16-7.2 16-16V176h48c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80zm0 352c48.5 0 80-39.6 80-88c0-15.5-3.3-30.3-9.3-44H96.3c-6 13.7-9.3 28.5-9.3 44c0 48.4 31.5 88 80 88zm32-240h-64v-32h64v32zm128 240c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64c0-70.7 57.3-128 128-128c17.6 0 32 14.4 32 32c0 17.6 14.4 32 32 32c70.7 0 128 57.3 128 128z"></path>
-        </symbol>
-        <symbol id="icon-robot" viewBox="0 0 640 512">
-            <path fill="currentColor" d="M320 32c-8.8 0-16 7.2-16 16V96H192v80h32v48c0 88.4 71.6 160 160 160s160-71.6 160-160v-48h32V96h-96V48c0-8.8-7.2-16-16-16H320zM320 96h96v80H320V96zm0 432c-8.8 0-16-7.2-16-16s7.2-16 16-16s16 7.2 16 16s-7.2 16-16 16zM160 144c-35.3 0-64 28.7-64 64v96h32v-96c0-17.6 14.4-32 32-32h32V144H160zm480 0H576v48h32c17.6 0 32-14.4 32-32v-96h-32v96c0 35.3-28.7 64-64 64z"></path>
-        </symbol>
-        <symbol id="icon-download" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.1 377.7c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v80c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24z"></path>
-        </symbol>
-        <symbol id="icon-credit-card" viewBox="0 0 576 512">
-            <path fill="currentColor" d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332c0-22.1-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40s40-17.9 40-40zm160 0c0-22.1-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40s40-17.9 40-40z"></path>
-        </symbol>
-        <symbol id="icon-magic" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M503.7 32.1c9.1 4.1 15.3 13.1 15.3 22.8V135c0 9.8-6.2 18.8-15.3 22.8L320 217.7V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V217.7L8.3 157.8C-0.9 153.7-0.9 142.3 8.3 138.2s22.1-2.1 27.7 2.5L192 203v-64c0-35.3 28.7-64 64-64s64 28.7 64 64v64l155.9-62.3c5.6-4.6 14.7-5.2 20.9-1.2z"></path>
-        </symbol>
-        <symbol id="icon-graduation" viewBox="0 0 448 512">
-            <path fill="currentColor" d="M448 360V24c0-13.3-10.7-24-24-24H24C10.7 0 0 10.7 0 24v336c0 13.3 10.7 24 24 24h40v104l192-72 192 72V384h40c13.3 0 24-10.7 24-24zM224 464l-79.7-30L64 456v-72h160v72zm160-72h-96v72l-32-12-32 12v-72H64V48h320v240z"></path>
-        </symbol>
-        <symbol id="icon-certificate" viewBox="0 0 640 512">
-            <path fill="currentColor" d="M320 0C212 0 128 84 128 192v96H96V192C96 64.5 224.5 0 384 0h-64zm-96 384H64V480c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V384H416V192c0-70.7-57.3-128-128-128s-128 57.3-128 128v192zm192 0h96v96H224V384h96v-32c0-17.7 14.3-32 32-32s32 14.3 32 32v32zm32-192c0-35.3-28.7-64-64-64s-64 28.7-64 64v192h128V192z"></path>
-        </symbol>
-        <symbol id="icon-language" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M0 256.01c0 137 111 248 248 248s248-111 248-248S393 8.01 256 8.01 8 119 8 256.01zm330.26 149.35c-53.09 31.4-114.22 48.62-176.52 48.62-170.29 0-308-137.7-308-308 0-15.66 1.26-31.15 3.67-46.43L185.47 357.39c29.27-15.22 60.93-23.5 93.57-23.5 20.28 0 40.23 3.23 59.22 9.46zM452.32 225.36l-215.37-123.9C256.47 85.55 280.62 80 305.33 80c165.06 0 299 133.92 299 299 0 14.17-1.04 28.22-3.08 42.06L452.32 225.36z"></path>
-        </symbol>
-        <symbol id="icon-mail" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
-        </symbol>
-        <symbol id="icon-phone" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path>
-        </symbol>
-        <symbol id="icon-map-pin" viewBox="0 0 384 512">
-            <path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
-        </symbol>
-        <symbol id="icon-chevron-up" viewBox="0 0 24 24">
-            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m18 15-6-6-6 6"></path>
-        </symbol>
-        <symbol id="icon-microchip" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M400 32H112C60.2 32 20 66.9 20 112v288c0 45.1 40.2 80 92 80h288c51.8 0 92-34.9 92-80V112c0-45.1-40.2-80-92-80zm-16 32h32c26.4 0 48 19.2 48 43.7V128H384V64zm-64 0h32v64H320V64zm-64 0h32v64H256V64zm-64 0h32v64H192V64zm-64 0h32c-1.1 14.2-1.6 25.7-1.6 32s.5 17.8 1.6 32H84c-26.4 0-48-19.2-48-43.7V95.7C36 71.2 57.6 52 84 52h32v12zM68 160c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM68 208c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM68 256c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM68 304c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM68 352c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zm376 0c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4s4-1.8 4-4v-4c0-2.2-1.8-4-4-4zM256 160c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32V192c0-17.7-14.3-32-32-32zm0 32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16s-16-7.2-16-16v-64c0-8.8 7.2-16 16-16zM44 416c0-26.4 19.2-48 43.7-48H88v64H84c-26.4 0-48-19.2-48-43.7V416zm128 0h-32v-64h32v64zm64 0h-32v-64h32v64zm64 0h-32v-64h32v64zm64 0h32c-1.1-14.2-1.6-25.7-1.6-32s.5-17.8 1.6-32h-32v64z"></path>
-        </symbol>
-        <symbol id="icon-palette" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M256 32c123.5 0 223.4 100.3 223.4 224S379.5 480 256 480 32.6 379.7 32.6 256 132.5 32 256 32zm0 32c-105.9 0-192 86.4-192 192 0 105.9 86.1 192 192 192 105.9 0 192-86.1 192-192 0-105.6-86.1-192-192-192zm96 224c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm-96 0c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm96-96c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm-96 0c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32z"></path>
-        </symbol>
-        <symbol id="icon-certificate" viewBox="0 0 640 512">
-            <path fill="currentColor" d="M480 32H32C14.3 32 0 46.3 0 64v384c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM192 448H96v-64h96v64zm0-128H96v-64h96v64zm0-128H96V96h96v96zm160 256h-96v-64h96v64zm0-128h-96v-64h96v64zm0-128h-96V96h96v96z"></path>
-            <path fill="currentColor" d="M352 416c-17.6 0-32-14.4-32-32s14.4-32 32-32s32 14.4 32 32s-14.4 32-32 32zm0-128c-17.6 0-32-14.4-32-32s14.4-32 32-32s32 14.4 32 32s-14.4 32-32 32zm0-128c-17.6 0-32-14.4-32-32s14.4-32 32-32s32 14.4 32 32s-14.4 32-32 32z"></path>
-        </symbol>
-        <symbol id="icon-envelope" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm0 48h416c8.8 0 16 7.2 16 16v192H32V128c0-8.8 7.2-16 16-16zm432 248H312c-13.3 0-24 10.7-24 24s10.7 24 24 24h168c8.8 0 16-7.2 16-16s-7.2-16-16-16z"></path>
-        </symbol>
-        <symbol id="icon-phone" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 461.5-2 473.1.6 484.4l24 104C27.1 603.5 36.6 608 48 608c256.1 0 464-207.5 464-464 0-11.4-4.5-20.9-11.6-27.4z"></path>
-        </symbol>
-        <symbol id="icon-map-marker" viewBox="0 0 384 512">
-            <path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0z"></path>
-        </symbol>
-        <symbol id="icon-linkedin" viewBox="0 0 448 512">
-            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
-        </symbol>
-        <symbol id="icon-github" viewBox="0 0 496 512">
-            <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-40.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-12.9c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6-.2-22.1-.3-43.5-67.2 15.4-82.3-28.6-82.3-28.6-11.5-29.8-27.5-37.5-27.5-37.5-22.2-15.4 1.7-15 1.7-15 24.7 1.8 37.5 25.2 37.5 25.2 21.9 37.4 56.8 26.4 70.8 20.5 2.2-16 8.9-26.4 16-33-53.7-6.2-109.8-27.8-109.8-116.2 0-25.2 8.7-45.6 23-61.6-2.3-5.7-10-28.5 2.2-60.8 0 0 18.5-5.9 62.7 25.6 17.9-.5 36.5-2.7 54.7-7.2 19.3 18.1 46.5 24.8 72.7 25 26.2-1.2 53.4-6.9 72.7-25 44.2-31.5 62.7-25.6 62.7-25.6 12.2 32.3 4.5 55.1 2.2 60.8 14.3 16.1 23 36.4 23 61.6 0 88.4-56.1 110-109.9 116.2 8.6 7.4 16 21.2 16 42.5 0 30.7-.3 55.5-.3 63 0 6.5 4.6 14.4 17.3 12.1C426.2 457.8 496 362.9 496 252 496 113.3 389.9 8 244.8 8z"></path>
-        </symbol>
-        <symbol id="icon-wechat" viewBox="0 0 448 512">
-            <path fill="currentColor" d="M352 0H96C43 0 0 43 0 96v320c0 53 43 96 96 96h256c53 0 96-43 96-96V96c0-53-43-96-96-96zm-95.8 316.9c-3.7.8-7.4 1.3-11.3 1.3-52.7 0-95.4-47.4-87.7-99.9 3.1-21.3 14.3-40.3 30.8-53.2 12.2-9.3 27.6-14.3 43.3-14.3 29.6 0 53.5 24.1 53.5 53.6 0 2.8-.2 5.5-.6 8.3-7.8-3.3-16.6-5.2-25.8-5.2-14.3 0-26 7.5-32.6 18.3-3.9 6.1-3.2 13.8 1.8 18.7 3.2 3.2 7.5 4.9 11.9 4.9 22.1 0 40.1-18.3 40.1-40.5 0-1.1-.1-2.2-.2-3.2 15.5 2.2 28.9 15.1 30.7 30.6C367 284.1 364.7 312.5 256.2 316.9zm-87.2-68.6c0 25.4-20.7 46-46 46s-46-20.6-46-46 20.7-46 46-46 46 20.6 46 46z"></path>
-        </symbol>
-        <symbol id="icon-weibo" viewBox="0 0 448 512">
-            <path fill="currentColor" d="M416 64H32C14.3 64 0 78.3 0 96v320c0 17.7 14.3 32 32 32h130.7c-6.6-19.2-10.7-39.8-10.7-61.9c0-123.7 100.6-224.4 224.3-224.4c53.8 0 103.9 21.2 141.3 57.1v-119C448 78.3 433.7 64 416 64zm-48.4 363.3c-49.5 0-90.3-37.1-90.3-82.6c0-45.5 40.8-82.6 90.3-82.6c49.5 0 90.3 37.1 90.3 82.6c0 45.5-40.8 82.6-90.3 82.6zM313.6 218c-22.2 0-40.3 18.2-40.3 40.6c0 22.3 18.2 40.6 40.3 40.6c22.2 0 40.3-18.2 40.3-40.6C354 236.2 335.8 218 313.6 218z"></path>
-        </symbol>
-        <symbol id="icon-palette" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M448 32c-8.1 0-16 .8-23.6 2.3L320 96V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v32L87.6 34.3C80 32.8 72.1 32 64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zM352 192c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64zM224 384c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM160 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM384 288c0-17.7 14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32z"></path>
-        </symbol>
-        <symbol id="icon-chevron-up" viewBox="0 0 448 512">
-            <path fill="currentColor" d="M240 416c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V183.8l100.3 100.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 183.8V416z"></path>
-        </symbol>
-    </svg>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2563eb',
-                        secondary: '#4f46e5',
-                        accent: '#8b5cf6',
-                        dark: '#1e293b',
-                        light: '#f8fafc'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .bg-gradient-primary {
-                background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
-            }
-            .transition-transform-opacity {
-                transition-property: transform, opacity;
-            }
-
-        }
-    </style>
+    <meta name="description" content="鲍龙云 - 高级产品经理，14年工作经验，AI产品专家，全球化产品管理专家">
+    <meta name="keywords" content="产品经理, AI产品, 产品总监, 鲍龙云, Product Manager, AI">
+    <meta name="author" content="鲍龙云">
+    <title>鲍龙云 - 高级产品经理 | AI产品专家</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light text-dark font-sans">
-    <!-- 导航栏 -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <span class="text-xl font-bold text-primary">鲍龙云</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-center space-x-8">
-                        <a href="#about" class="text-dark hover:text-primary transition-colors duration-200">关于我</a>
-                        <a href="#experience" class="text-dark hover:text-primary transition-colors duration-200">工作经历</a>
-                        <a href="#projects" class="text-dark hover:text-primary transition-colors duration-200">项目成果</a>
-                        <a href="#education" class="text-dark hover:text-primary transition-colors duration-200">教育背景</a>
-                        <a href="#contact" class="text-dark hover:text-primary transition-colors duration-200">联系方式</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-dark hover:text-primary focus:outline-none">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <use xlink:href="#icon-menu"></use>
-                        </svg>
-                    </button>
-                </div>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-name">鲍龙云</span>
+                <span class="brand-title">Product Manager</span>
             </div>
-        </div>
-        <!-- 移动端菜单 -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-gray-50">关于我</a>
-                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-gray-50">工作经历</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-gray-50">项目成果</a>
-                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-gray-50">教育背景</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-gray-50">联系方式</a>
-            </div>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#advantages" class="nav-link">个人优势</a></li>
+                <li><a href="#experience" class="nav-link">工作经历</a></li>
+                <li><a href="#education" class="nav-link">教育背景</a></li>
+                <li><a href="#contact" class="nav-link">联系方式</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- 英雄区域 -->
-    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col items-center text-center">
-                <div class="relative w-48 h-48 mb-6">
-                    <div class="absolute inset-0 bg-gradient-primary rounded-full opacity-20 blur-3xl"></div>
-                    <div class="relative w-full h-full bg-white rounded-full shadow-xl overflow-hidden border-4 border-white">
-                        <!-- 个人头像 -->
-                        <img src="images/afa95d43-6b6b-43a7-a3d0-e68ef40d4ffd.png" alt="鲍龙云" class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark mb-4 text-shadow">
-                    鲍龙云
-                </h1>
-                <p class="text-[clamp(1.1rem,2vw,1.5rem)] text-gray-600 mb-8 max-w-2xl">
-                    高级产品管理 | AI产品专家 | 用户增长策略师
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#contact" class="px-8 py-3 bg-gradient-primary text-white font-medium rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                        联系我
-                    </a>
-                    <a href="鲍龙云-高级产品管理岗.pdf" target="_blank" class="px-8 py-3 bg-white text-primary border border-primary font-medium rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                        下载简历 <span class="text-xs text-gray-500">(更新于2025-11-13)</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 关于我 -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">关于我</h2>
-                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
-                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    我是一名拥有丰富经验的高级产品经理，专注于AI产品开发与用户增长策略。
-                        曾主导多个成功的产品项目，在用户增长、付费转化和商业闭环构建方面有卓越表现。
-                        擅长通过数据驱动的方式优化产品体验，实现业务目标。
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-label">高级产品经理 · AI产品专家</div>
+                    <h1 class="hero-title">
+                        <span class="name-cn">鲍龙云</span>
+                        <span class="name-en">Bao Longyun</span>
+                    </h1>
+                    <p class="hero-description">
+                        14年产品管理经验 | AI技术商业化专家 | 全球化产品负责人
                     </p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 16.5 9-9"></path><path d="m12.5 15.5 7-7a22 22 0 0 0-15.5-6.5c2.7-1.1 5.6-.5 8.2 1.2"></path><path d="M9.5 19.5c2.7 1.1 5.6.5 8.2-1.2a22 22 0 0 0-15.5-6.5l7 7"></path><path d="m12 15-3.37-.37a2.12 2.12 0 1 1 0-3.28L12 9l3.37.37a2.12 2.12 0 1 1 0 3.28L12 15Z"></path><path d="M8.5 11.5 7 13l1.5 1.5"></path><path d="M17 11.5 15.5 13 17 14.5"></path></svg>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">14+</div>
+                            <div class="stat-label">年工作经验</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5亿+</div>
+                            <div class="stat-label">产品下载量</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">112%</div>
+                            <div class="stat-label">ARPU提升</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">AI认证</div>
+                            <div class="stat-label">微软AI-900</div>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#experience" class="btn btn-primary">查看经历</a>
+                        <a href="#contact" class="btn btn-secondary">联系我</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="profile_photo.png" alt="鲍龙云 - 产品经理">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>向下滚动</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Personal Advantages Section -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">个人优势</h2>
+                <p class="section-subtitle">核心竞争力与专业技能</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">产品管理专家</h3>
+                    <p class="card-description">
+                        10年C端产品管理与AI技术商业化专家，兼具亿级用户产品全生命周期管理经验与前沿AI技术落地能力，专注于通过技术驱动商业增长。
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">产品全生命周期</span>
+                        <span class="tag">亿级用户</span>
+                        <span class="tag">商业增长</span>
+                    </div>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M9 3v18M3 9h18M3 15h18M15 3v18" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">AI技术深度应用</h3>
+                    <p class="card-description">
+                        持有微软AI工程师认证（AI-900），精通LLM、多模态生成与RAG框架，具备Python开发能力。成功主导AI功能落地，驱动产品收益提升超50%。
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">LLM</span>
+                        <span class="tag">RAG框架</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">收益+50%</span>
+                    </div>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">商业化与全球化</h3>
+                    <p class="card-description">
+                        精通订阅与广告双变现模型，曾通过动态定价与算法优化实现用户ARPU值提升112%。主导5款累计下载超5亿的应用出海，产品曾登顶多国工具榜TOP5。
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">全球化</span>
+                        <span class="tag">ARPU+112%</span>
+                        <span class="tag">5亿下载</span>
+                    </div>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18" />
+                            <path d="M18 17V9M13 17V5M8 17v-3" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">数据驱动决策</h3>
+                    <p class="card-description">
+                        持有PMP认证，擅长领导跨职能团队采用敏捷与OKR管理，保障项目100%准确交付。精通AARRR模型等数据分析方法，曾主导项目实现付费转化率提升300%。
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">PMP认证</span>
+                        <span class="tag">敏捷/OKR</span>
+                        <span class="tag">转化率+300%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">工作经历</h2>
+                <p class="section-subtitle">14年产品管理与创新历程</p>
+            </div>
+            <div class="timeline">
+                <!-- Experience Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3 class="timeline-title">AI产品经理</h3>
+                                <span class="timeline-company">上海心海舟楫健康科技有限公司</span>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-lg mb-2">产品创新</h3>
-                                <p class="text-gray-600">擅长从0到1孵化创新产品，整合前沿技术实现商业价值</p>
+                            <span class="timeline-date">2025.04 - 2025.10</span>
+                        </div>
+                        <div class="timeline-details">
+                            <ul class="achievement-list">
+                                <li><strong>AI产品0-1孵化：</strong>主导面向0-10岁教育领域的AI心理咨询Agent产品从概念到MVP上线，3个月内成功上线，项目准时交付率达95%
+                                </li>
+                                <li><strong>大模型应用优化：</strong>搭建Prompt工程规划及批量测试体系，上线后核心功能用户满意度达100%</li>
+                                <li><strong>AI赋能创新：</strong>应用心理学技术对AI交付结果进行个性化展示，推动用户平均停留时长提升25%，设计效率提升30%</li>
+                                <li><strong>合规体系构建：</strong>主导建立产品全链路合规风控体系，上架准备效率提升30%，实现零合规风险高效上线</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3 class="timeline-title">产品总监</h3>
+                                <span class="timeline-company">钱咖网络科技（上海）有限公司</span>
+                            </div>
+                            <span class="timeline-date">2024.06 - 2024.12</span>
+                        </div>
+                        <div class="timeline-details">
+                            <ul class="achievement-list">
+                                <li><strong>TikTok电商产品矩阵：</strong>作为业务负责人主导0-1构建，成功交付包含前端消费者App、商家管理后台及运营中台在内的完整解决方案
+                                </li>
+                                <li><strong>AIGC技术应用：</strong>主导集成多模态AI系统，应用于营销文案生成、商品图制作及短视频智能混剪，内容重复率降低至12%，审核通过率提升25个百分点
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3 class="timeline-title">产品经理 / 高级产品经理 / 部门负责人</h3>
+                                <span class="timeline-company">上海影卓信息科技有限公司</span>
+                            </div>
+                            <span class="timeline-date">2016.03 - 2024.06</span>
+                        </div>
+                        <div class="timeline-details">
+                            <div class="sub-timeline">
+                                <div class="sub-item">
+                                    <h4>高级产品经理 (2022.03 - 2024.06)</h4>
+                                    <ul class="achievement-list">
+                                        <li><strong>核心产品商业化：</strong>全面负责百万日活手机视频编辑工具VideoShow的营收体系，主导重构付费系统，整体收益增长50%，ARPU值提升112%
+                                        </li>
+                                        <li><strong>AI技术驱动创新：</strong>主导数字人产品Viddo从0到1孵化，上线6个月实现百万下载，付费转化率达12%，高价值用户ARPU为$15/月
+                                        </li>
+                                        <li><strong>AI视频编辑模块：</strong>通过Prompt工程+SD自动化流程推出AI视频编辑功能，高级付费率提升50%，用户活跃度增长82.4%
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sub-item">
+                                    <h4>部门负责人 (2020.03 - 2022.03)</h4>
+                                    <ul class="achievement-list">
+                                        <li><strong>团队组建：</strong>从0到1组建并领导10人产品技术团队，引入敏捷与OKR管理，产品平均上线周期缩短至3个月，项目交付准时率100%
+                                        </li>
+                                        <li><strong>产品矩阵孵化：</strong>主导5款工具应用出海，总下载量突破1000万，视频下载器产品3个月内日新增用户突破10万，登顶12国工具榜TOP5
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sub-item">
+                                    <h4>产品经理 (2016.03 - 2020.03)</h4>
+                                    <ul class="achievement-list">
+                                        <li><strong>全球化发行：</strong>负责VideoShow等产品迭代与全球化发行，推动产品进入全球150余国工具榜TOP5，连续多年超额150%完成业绩目标
+                                        </li>
+                                        <li><strong>付费率提升专项：</strong>通过用户行为分析与促销方案设计，实现付费转化率提升300%，LTV增长200%，ARPU值从2.5提升至7.8
+                                        </li>
+                                        <li><strong>创新功能开发：</strong>通过KANO模型首创"一键编辑"功能，新用户留存率提升57.8%，模块使用率达60%</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+                    </div>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3 class="timeline-title">产品经理</h3>
+                                <span class="timeline-company">上海商路网络科技有限公司</span>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-lg mb-2">用户增长</h3>
-                                <p class="text-gray-600">建立完整的增长模型，实现高效的用户获取与留存</p>
-                            </div>
+                            <span class="timeline-date">2015.08 - 2016.02</span>
                         </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-lg mb-2">商业变现</h3>
-                                <p class="text-gray-600">优化付费转化率，提升ARPU值，实现持续盈利增长</p>
-                            </div>
+                        <div class="timeline-details">
+                            <ul class="achievement-list">
+                                <li><strong>产品迭代管理：</strong>主导电商智能测肤APP 3.0-4.2版本全链路迭代，任职期内用户增长25.8%</li>
+                            </ul>
                         </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 16.5a2.12 2.12 0 0 1-3 3L6 21l3-8.12a2.12 2.12 0 0 1 3-3l1.5 1.5 4.5-4.5"></path><path d="M10 11.5v3a2.12 2.12 0 0 1-3 1.87L4 14l8-3.5"></path><path d="M17.5 4h-11a2.5 2.5 0 0 0-2.5 2.5v11a2.5 2.5 0 0 0 2.5 2.5h11a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 17.5 4Z"></path><path d="m12 7-2 2"></path><path d="m12 11-2 2"></path><path d="m15 7-1.5 1.5"></path><path d="m9 11-1.5 1.5"></path><path d="m12 15 2 2"></path></svg>
+                    </div>
+                </div>
+
+                <!-- Experience Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3 class="timeline-title">CEO助理</h3>
+                                <span class="timeline-company">上海亿儒投资管理有限公司</span>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-lg mb-2">AI技术整合</h3>
-                                <p class="text-gray-600">将LLM与多模态生成技术应用于产品，提升用户体验</p>
+                            <span class="timeline-date">2014.04 - 2015.07</span>
+                        </div>
+                        <div class="timeline-details">
+                            <ul class="achievement-list">
+                                <li><strong>商业策略推动：</strong>深度参与业务战略全周期规划，协助CEO完成商业方案、招商体系、合同标准化设计</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3 class="timeline-title">城市经理</h3>
+                                <span class="timeline-company">东芝电脑网络(上海)有限公司</span>
                             </div>
+                            <span class="timeline-date">2012.03 - 2014.02</span>
+                        </div>
+                        <div class="timeline-details">
+                            <ul class="achievement-list">
+                                <li><strong>渠道运营：</strong>构建"渠道生态"产品化运营体系，统筹15家经销商零售推广策略，2012年6-8月业绩分别增长103%、112%、138%
+                                </li>
+                                <li><strong>代理商开发：</strong>下沙2家、滨江5家、黄山3家，积累产品全渠道分发与用户增长的运营能力</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -260,615 +337,162 @@
         </div>
     </section>
 
-    <!-- 工作经历 -->
-    <section id="experience" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">工作经历</h2>
-                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+    <!-- Education & Certifications Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">教育背景与资格证书</h2>
+                <p class="section-subtitle">学历与专业认证</p>
             </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <!-- 工作经历时间线 -->
-                <div class="relative">
-                    <!-- 中心线 -->
-                    <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-gray-200 transform md:translate-x-[-50%]"></div>
-                    
-                    <!-- 工作经历1: 上海心海舟楫健康科技有限公司 -->
-                    <div class="relative z-10 mb-12 flex flex-col md:flex-row">
-                        <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
-                            <h3 class="text-xl font-semibold text-dark mb-1">AI产品经理 - 上海心海舟楫健康科技有限公司</h3>
-                            <p class="text-primary font-medium mb-3">2025.04-2025.10</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">MVP 规划与功能落地：</h4>
-                                <p class="text-gray-700 mb-4">主导需求挖掘与优先级排序，针对0-10岁教育领域，以家庭教育+心理咨询为核心，完成国内外竞品调研，完成原型架构设计；AI基座选型，搭建大模型evaluate的评价机制，数据飞轮框架设计，prompt工程相关规划及批量测试。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">推动 AI 工具提效：</h4>
-                                <p class="text-gray-700 mb-4">用 AI 制作原型 DEMO，设计效率提升 30%；利用AI工具搭建批量生成教育类歌曲工作流，完成音乐模块的内容输出，通过 "AI 音乐筛选 + 人工评审" 确定最终方案；成果：3 个月内完成小程序 MVP 上线，核心功能用户满意度 100%+。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">跨团队协同与进度管控：</h4>
-                                <p class="text-gray-700 mb-4">制定详细 Timeline，制作工期管理表格同步研发 / UI / 测试团队，组织站会与 review 会议；识别并解决研发延期、需求变更等 3 项风险，项目交付准时率 95%+。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">产品迭代与体验优化：</h4>
-                                <p class="text-gray-700 mb-4">完成 V1.0-V1.1.3 共 4 款迭代，落地 "CBT认知重构""NVC 练习卡更新" 等核心功能，优化方案详情页展示逻辑；以数据飞轮为核心理念，设计 schema 分析 prompt、音乐卡匹配机制，优化多轮对话体验，用户停留时长提升 25%。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">合规与测试保障：</h4>
-                                <p class="text-gray-700 mb-4">制定上线标准，撰写 5 + 份完整功能测试脚本，完成埋点设计与验收，BUG 修复率 98%；优化敏感词系统，修改隐私政策 / 儿童隐私协议，确保产品合规上线。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">APP 前期筹备：</h4>
-                                <p class="text-gray-700 mb-4">完成 Apple/Google Play/国内Android企业开发者账号注册（资料提交 + 付款），准备 ICP 备案、教育部教育移动互联网应用程序备案资料；</p>
-                                <h4 class="font-medium text-gray-900 mb-2">产品IP自媒体内容产出：</h4>
-                                <p class="text-gray-700">搭建产品IP的自媒体内容，多模态内容的策划，到AI工作流生产内容的实施</p>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 md:pl-10 order-1 md:order-2 flex justify-center md:justify-start">
-                            <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                        </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="card-icon-large">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
                     </div>
-                    
-                    <!-- 工作经历2: 钱咖网络科技（上海）有限公司 -->
-                    <div class="relative z-10 mb-12 flex flex-col md:flex-row">
-                        <div class="md:w-1/2 md:pr-10 order-2 md:order-1 flex justify-center md:justify-end">
-                        </div>
-                        <div class="md:w-1/2 md:pl-10 order-1 md:order-2 mt-4 md:mt-0 pl-12 md:pl-10">
-                            <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                            <h3 class="text-xl font-semibold text-dark mb-1">产品总监 - 钱咖网络科技（上海）有限公司</h3>
-                            <p class="text-primary font-medium mb-3">2024.06-2024.12</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">业务介绍：</h4>
-                                <p class="text-gray-700 mb-4">公司由网赚类产品转型为主要从事电商服务类业务，需要从 0 到 1 搭建整个电商服务体系，专注于 TikTok 流量获取及分发，为 TikTok 电商商品引流。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">负责业务：</h4>
-                                <p class="text-gray-700 mb-4">负责市场调研和用户分析，构建用户画像，分析行业内竞争对手情况，并依据市场需求对平台功能进行优先级排序。运用大数据分析技术对用户行为进行深度挖掘，确保平台的 UI/UX 设计贴合目标用户群体需求。采用敏捷开发流程，有效管理项目进度，同时与技术、设计、市场等部门紧密协作，保障资源的有效分配。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">具体工作内容：</h4>
-                                <ul class="text-gray-700 list-disc list-inside space-y-1">
-                                    <li>负责 TikTok 电商赋能产品在海外上线的相关工作，涵盖 C 端 Apple store 和 google play 的 APP 产品需求规划、UI 把控以及研发进度跟进。</li>
-                                    <li>负责电商商家端 web 产品的需求、UI 设计以及研发进度管理。</li>
-                                    <li>负责 APP 及商家中台支撑管理系统的需求、UI 设计以及开发进度把控。</li>
-                                    <li>参与并主导电商带货视频的主导多模态 AI 系统集成，实现文本 - 图像 - 视频跨模态检索与生成，提高带货视频转化率。通过视频混剪去重算法，使内容重复率从 40% 降至 12%，审核通过率提升 25%。</li>
-                                    <li>进行跨部门协调与项目管理，有效协调跨部门、跨公司、跨区域的资源，把控多方联合项目，涉及与广州、厦门团队的远程沟通及协作。</li>
-                                    <li>建立 KPI 监控与预警机制，设立关键绩效指标（KPIs），如用户活跃度、转化率、留存率、视频转化率等，并搭建实时监控系统。对异常数据变化进行预警，及时发现并解决问题，以保证业务稳定运行。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 工作经历3: 上海影卓信息科技有限公司（VideoShow）高级产品经理 -->
-                    <div class="relative z-10 mb-12 flex flex-col md:flex-row">
-                        <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
-                            <h3 class="text-xl font-semibold text-dark mb-1">高级产品经理 - 上海影卓信息科技有限公司（VideoShow）</h3>
-                            <p class="text-primary font-medium mb-3">2022.03-2024.06</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">双变现模式升级：</h4>
-                                <p class="text-gray-700 mb-3">设计订阅+广告双变现模式，通过动态定价、广告算法优化等策略，实现收益最大化。</p>
-                                <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
-                                    <li>订阅端优化：设计动态定价策略，针对潜力层推出"AI功能包"限时折扣，订阅转化率提升42%</li>
-                                    <li>广告端升级：主导多平台广告SDK（AdMob、Facebook Audience Network、AppLovin MAX）的集成与优化，通过智能广告位管理与算法调优实现变现效率提升。设计"广告频次控制算法"，平衡用户体验与收益，广告点击率（CTR）提高22%。实现多SDK聚合管理，通过瀑布流与实时竞价（Waterfall + RTB）混合模式，使填充率从75%提升至92%。</li>
-                                    <li>双变现模式驱动VideoShow整体收益增长50%，其中订阅收入占比从32%提升至51%，广告变现效率提升47%，实现单用户日均广告收益（ARPU）增长112%。</li>
-                                </ul>
-                                
-                                <h4 class="font-medium text-gray-900 mb-2">主导AI赋能项目：</h4>
-                                <p class="text-gray-700 mb-3">主导VideoShow视频编辑工具的AI技术赋能研究与独立产品孵化，构建"多模态视频生成框架"，整合LLM（GPT-4）与Stable Diffusion，实现文本-图像-视频跨模态生成。</p>
-                                <ul class="text-gray-700 list-disc list-inside space-y-1">
-                                    <li>完成数字人产品可行性研究，通过SWOT分析与竞品对标，确定"AI驱动的虚拟形象生成"为核心方向。</li>
-                                    <li>设计"AI视频生成工作流"，通过ComfyUI实现模型训练与部署，生成效率提升400%。</li>
-                                    <li>推出"AI视频"功能，带动VideoShow高级付费率增长50%，用户活跃度提升82.4%。</li>
-                                    <li>0-1孵化数字人产品Viddo，通过用户分层运营策略实现百万级下载量，月均推广ROI达3.2。</li>
-                                    <li>建立"AI功能模块库"，支持快速复用至其他产品线。推动技术团队与业务团队深度协作，实现从算法开发到用户增长的全链路闭环。</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 md:pl-10 order-1 md:order-2 flex justify-center md:justify-start">
-                            <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- 工作经历3.5: 上海影卓信息科技有限公司（VideoShow）部门负责人 -->
-                    <div class="relative z-10 mb-12 flex flex-col md:flex-row">
-                        <div class="md:w-1/2 md:pr-10 order-2 md:order-1 flex justify-center md:justify-end">
-                        </div>
-                        <div class="md:w-1/2 md:pl-10 order-1 md:order-2 mt-4 md:mt-0 pl-12 md:pl-10">
-                            <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                            <h3 class="text-xl font-semibold text-dark mb-1">部门负责人 - 上海影卓信息科技有限公司（VideoShow）</h3>
-                            <p class="text-primary font-medium mb-3">2020.03-2022.03</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">战略布局与团队管理：</h4>
-                                <p class="text-gray-700 mb-4">制定并执行公司工具类应用出海战略，以Downloader系列为核心，组建10人跨职能团队（包含产品、UI、研发人员），搭建"预研-开发-推广"全流程管理体系，推动Cast to TV、QR Scanner、Translator等5款工具应用从0到1落地，总下载量突破1000万次。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">敏捷开发与流程优化：</h4>
-                                <p class="text-gray-700 mb-4">引入敏捷开发框架（Sprint迭代），将产品从需求到上线周期缩短至平均3个月；建立OKR目标管理法，确保团队高效协作，项目交付准时率达到100%。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">全球化运营与数据驱动：</h4>
-                                <p class="text-gray-700 mb-4">基于AARRR模型制定增长策略，通过国家维度的用户画像分析（如设备、行为、付费习惯等方面），精准投放资源。主导Downloader Pro付费版开发，采用订阅制使LTV提升180%，推广ROI达2.43。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">商业价值突破：</h4>
-                                <p class="text-gray-700">带领团队超额完成年度目标200%，部门净收益同比增长150%。其中Downloader登顶12国应用商店工具榜TOP5，MAU超150万。</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 工作经历4: 上海影卓信息科技有限公司（VideoShow）早期阶段 -->
-                    <div class="relative z-10 mb-12 flex flex-col md:flex-row">
-                        <div class="md:w-1/2 md:pr-10 order-2 md:order-1 flex justify-center md:justify-end">
-                        </div>
-                        <div class="md:w-1/2 md:pl-10 order-1 md:order-2 mt-4 md:mt-0 pl-12 md:pl-10">
-                            <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                            <h3 class="text-xl font-semibold text-dark mb-1">产品经理 - 上海影卓信息科技有限公司（VideoShow）</h3>
-                            <p class="text-primary font-medium mb-3">2016.03-2020.03</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">VideoShow全球化产品开发：</h4>
-                                <p class="text-gray-700 mb-4">主要负责视频编辑出海产品TOP5（在150多个国家稳定排名前五）的VideoShow产品在iOS/Android、国内/海外市场的开发工作。通过精准定位与创新功能的引入，提升产品收入，并带领团队开拓国际市场。</p>
-                                <ul class="text-gray-700 list-disc list-inside space-y-1 mb-4">
-                                    <li>确保平台UI/UX设计贴合目标用户群体需求，通过多版本原型测试及A/B测试优化用户体验。在此期间，每年超额完成年度公司北极星目标，平均达成率在150%以上。</li>
-                                    <li>主导VidCompact、Gifguru等多款海外版千万级产品从无到有的全过程（0-1），包括前期调研、功能设计、用户体验优化以及市场营销。</li>
-                                    <li>常态化使用AARRR海盗模型设计用户增长闭环，重点优化激活-留存-变现转化链路，以此指导产品决策。同时运用KANO模型进行需求优先级排序，构建必备型、期望型、魅力型功能矩阵，确保满足用户的真正需求。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 工作经历7: 上海商路网络科技有限公司 -->
-                    <div class="relative z-10 mb-12 flex flex-col md:flex-row">
-                        <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
-                            <h3 class="text-xl font-semibold text-dark mb-1">产品经理 - 上海商路网络科技有限公司</h3>
-                            <p class="text-primary font-medium mb-3">2015.08-2016.02</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">智能测肤设备APP迭代：</h4>
-                                <p class="text-gray-700 mb-4">主要负责智能测肤设备APP从3.0版本起的迭代规划与推进。工作涵盖电商、社区及测试功能模块，通过竞品分析、需求梳理、原型设计与PRD撰写，推动产品功能落地。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">团队协作与成果：</h4>
-                                <p class="text-gray-700">在职期间高效协同技术、UI及测试团队，保障产品顺利迭代版本。成果：目前该APP已从3.0迭代到4.2，从入职（8月11日）至11月25日，用户量增长25.8%。</p>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 md:pl-10 order-1 md:order-2 flex justify-center md:justify-start">
-                            <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- 工作经历8: 上海亿儒投资管理有限公司 -->
-                    <div class="relative z-10 mb-12 flex flex-col md:flex-row">
-                        <div class="md:w-1/2 md:pr-10 order-2 md:order-1 flex justify-center md:justify-end">
-                        </div>
-                        <div class="md:w-1/2 md:pl-10 order-1 md:order-2 mt-4 md:mt-0 pl-12 md:pl-10">
-                            <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                            <h3 class="text-xl font-semibold text-dark mb-1">CEO助理 - 上海亿儒投资管理有限公司</h3>
-                            <p class="text-primary font-medium mb-3">2014.04-2015.07</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">企业方案与招商支持：</h4>
-                                <p class="text-gray-700 mb-4">负责帮助CEO制定企业方案招商手册整套文案，包括薪资机制的初稿，融资、招商、培训PPT制作，合同制定。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">活动策划与执行：</h4>
-                                <p class="text-gray-700 mb-4">负责企业活动策划执行，具体包括市场竞品调查，模式规划，招商会前期策划、分配人员，微信订阅号制作宣传，以及帮助企业旗下餐饮进行团购对接，宣传海报规划。</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 工作经历9: 东芝电脑网络(上海)有限公司 -->
-                    <div class="relative z-10 flex flex-col md:flex-row">
-                        <div class="md:w-1/2 md:pr-10 order-2 md:order-1 mt-4 md:mt-0 pl-12 md:pl-0">
-                            <h3 class="text-xl font-semibold text-dark mb-1">城市经理 - 东芝电脑网络(上海)有限公司</h3>
-                            <p class="text-primary font-medium mb-3">2012.03-2014.02</p>
-                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                <h4 class="font-medium text-gray-900 mb-2">区域市场与渠道管理：</h4>
-                                <p class="text-gray-700 mb-4">负责杭州区15家经销商的零售推广工作对接，负责制造畅销机型的营销、策划、执行，与AMD、INTEL、腾讯等合作商进行联合推广的具体策划执行工作。</p>
-                                <h4 class="font-medium text-gray-900 mb-2">成果数据：</h4>
-                                <ul class="text-gray-700 list-disc list-inside space-y-1">
-                                    <li>2012年6、7、8三个月达成指标率分别为103%、112%、138%</li>
-                                    <li>负责10个月东芝电脑团购活动的举办推广策划和执行</li>
-                                    <li>开发杭州周边代理商，截至离职时，开发下沙区两家，滨江区5家，萧山区3家</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 md:pl-10 order-1 md:order-2 flex justify-center md:justify-start">
-                            <div class="w-8 h-8 rounded-full bg-primary border-4 border-white shadow absolute left-4 md:left-1/2 transform md:translate-x-[-50%] z-10"></div>
-                        </div>
-                    </div>
+                    <h3 class="education-title">浙江工业大学之江学院</h3>
+                    <p class="education-degree">本科 · 工商管理</p>
+                    <p class="education-date">2008 - 2012</p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 项目成果 -->
-    <section id="projects" class="py-20 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">项目成果</h2>
-                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">精选代表性项目，展示产品管理能力与商业价值创造</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- 项目1 -->
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 text-white opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20a6 6 0 0 0-6-6 6 6 0 0 0-6 6"/><path d="M15 14V3a1 1 0 0 0-1-1H10a1 1 0 0 0-1 1v11"/><circle cx="12" cy="19" r="1"/></svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-dark mb-2">家庭教育AI项目</h3>
-                        <p class="text-gray-600 mb-4">主导孵化一款面向0-10岁家庭教育的AI心理咨询Agent，融合Prompt工程与CBT/NVC心理学理论</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">AI产品</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Prompt工程</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">家庭教育</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2025.04-2025.09</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 项目2 -->
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 text-white opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-dark mb-2">数字人产品Viddo从0到1孵化</h3>
-                        <p class="text-gray-600 mb-4">主导AI数字人产品Viddo从0到1的孵化与商业化，整合LLM与多模态生成技术</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">数字人</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-pink-100 text-pink-800 rounded-full">多模态AI</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">商业化</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2023.01-2023.12</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 项目3 -->
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-download"></use></svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-dark mb-2">下载器工具品类开拓与增长</h3>
-                        <p class="text-gray-600 mb-4">主导一款下载器工具产品从0到1的孵化与增长，构建IAA商业模式</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 text-xs font-medium bg-orange-100 text-orange-800 rounded-full">0-1项目</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full">全球化</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">高ROI</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2020.01-2020.03</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 项目4 -->
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-r from-yellow-400 to-amber-500 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-credit-card"></use></svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-dark mb-2">VideoShow付费率提升专项</h3>
-                        <p class="text-gray-600 mb-4">通过用户行为分析与商业模型优化，大幅提升产品盈利能力</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 text-xs font-medium bg-pink-100 text-pink-800 rounded-full">付费转化</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-800 rounded-full">A/B测试</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">数据分析</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2019.09-2019.12</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 项目5 -->
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="h-48 bg-gradient-to-r from-red-400 to-rose-500 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80"><use xlink:href="#icon-palette"></use></svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-dark mb-2">VideoShow主题模块创新开发</h3>
-                        <p class="text-gray-600 mb-4">主导乐秀视频编辑工具主题模块创新开发，首创一键编辑功能</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 text-xs font-medium bg-violet-100 text-violet-800 rounded-full">用户体验</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-sky-100 text-sky-800 rounded-full">功能创新</span>
-                            <span class="px-3 py-1 text-xs font-medium bg-lime-100 text-lime-800 rounded-full">留存优化</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2016.09-2016.11</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 教育背景 -->
-    <section id="education" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">教育背景</h2>
-                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-white rounded-xl p-8 shadow-md">
-                    <div class="flex flex-col md:flex-row md:items-center mb-8 pb-8 border-b border-gray-100">
-                        <div class="md:w-1/4 mb-4 md:mb-0 flex justify-center md:justify-start">
-                            <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-primary"><use xlink:href="#icon-graduation"></use></svg>
-                            </div>
-                        </div>
-                        <div class="md:w-3/4 md:pl-8">
-                            <h3 class="text-xl font-semibold text-dark mb-1">浙江工业大学之江学院</h3>
-                            <p class="text-primary font-medium mb-2">工商管理 | 本科</p>
-                            <p class="text-gray-600">2008年 - 2012年</p>
-                        </div>
-                    </div>
-                    
-                    <h4 class="text-lg font-semibold text-dark mb-4">资格证书</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="bg-gray-50 p-4 rounded-lg text-center">
-                            <svg class="w-8 h-8 text-primary mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                            <p class="font-medium">PMP项目管理认证</p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg text-center">
-                            <svg class="w-8 h-8 text-primary mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 3-6 18-2-4-2 4-6-18Z"></path><path d="M7.5 8.25H9"></path><path d="M15 8.25h1.5"></path><path d="M10.5 12H13.5"></path><path d="M7.5 15.75H16.5"></path></svg>
-                            <p class="font-medium">大学英语四级</p>
-                        </div>
-                        <div class="bg-gray-50 p-4 rounded-lg text-center">
-                            <svg class="w-8 h-8 text-primary mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v4c0 1.1.9 2 2 2s2-.9 2-2V2"></path><path d="M2 10h4c1.1 0 2-.9 2-2s-.9-2-2-2H2"></path><path d="M22 10h-4c-1.1 0-2-.9-2-2s.9-2 2-2h4"></path><path d="M10 22v-4c0-1.1.9-2 2-2s2 .9 2 2v4"></path><path d="M4.93 17.86A9 9 0 0 1 4 20c0-3.87 3.13-7 7-7h2c3.87 0 7 3.13 7 7 0 .05 0 .1-.01.14"></path><path d="M12 13a4 4 0 0 0-4 4c0 1.05.3 1.91.82 2.62"></path><path d="M12 13a4 4 0 0 1 4 4c0 1.05-.3 1.91-.82 2.62"></path></svg>
-                            <p class="font-medium">微软人工智能工程师证书</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系我 -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">联系我</h2>
-                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">如果您对我的专业背景感兴趣，欢迎通过以下方式与我取得联系</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-50 rounded-xl p-8 shadow-md">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-xl font-semibold text-dark mb-6">联系方式</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                        <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-gray-500">电子邮箱</p>
-                                        <p class="font-medium">longyun.bao@foxmail.com</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                        <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-gray-500">手机号码</p>
-                                        <p class="font-medium">17717032695</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                        <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-gray-500">所在城市</p>
-                                        <p class="font-medium">上海市</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-8">
-                                <h4 class="text-lg font-semibold text-dark mb-4">社交媒体</h4>
-                                <div class="flex space-x-4">
-                                    <a href="https://v.douyin.com/xqwAjYFySos/%202@7.com%20:9pm" target="_blank" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300">
-                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M19.707 13.707c-.515-2.572-1.268-5.108-2.256-7.593a1.993 1.993 0 0 0-1.921-1.114c-1.514.156-3.02.768-4.43 1.807C8.693 3.761 6.218 4.347 4.527 5.27a1.983 1.983 0 0 0-1.247 1.757c-.235 2.567.261 5.147 1.246 7.612-.957.78-1.745 1.707-2.364 2.777a1.985 1.985 0 0 0 .63 2.686c.667.48 1.465.74 2.294.74 2.294 0 4.534-.804 6.338-2.234.785.133 1.585.202 2.397.202 1.514 0 3.022-.244 4.455-.724a1.993 1.993 0 0 0 2.242-1.82c.407-1.496.611-3.022.611-4.557 0-.738-.047-1.468-.14-2.192zm-5.878-3.388c.806 0 1.502-.696 1.502-1.502 0-.806-.696-1.502-1.502-1.502-.806 0-1.502.696-1.502 1.502 0 .806.696 1.502 1.502 1.502zm-4.506 0c.806 0 1.502-.696 1.502-1.502 0-.806-.696-1.502-1.502-1.502-.806 0-1.502.696-1.502 1.502 0 .806.696 1.502 1.502 1.502z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="https://doubao.com/bot/eYfSvZcp" target="_blank" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300">
-                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-2.69 1.4-5.09 3.56-6.44l.6.6c1.84-1.2 3.96-1.86 6.15-1.86 3.31 0 6 2.69 6 6 0 3.31-2.69 6-6 6zm-4.5-9.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm-2.5 5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold text-dark mb-6">发送消息</h3>
-                            <form id="contact-form">
-                                <div class="mb-4">
-                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">您的姓名</label>
-                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200" placeholder="请输入您的姓名">
-                                </div>
-                                <div class="mb-4">
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">电子邮箱</label>
-                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200" placeholder="请输入您的电子邮箱">
-                                </div>
-                                <div class="mb-4">
-                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">主题</label>
-                                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200" placeholder="请输入消息主题">
-                                </div>
-                                <div class="mb-6">
-                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">消息内容</label>
-                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200" placeholder="请输入您的消息内容"></textarea>
-                                </div>
-                                <button type="submit" class="w-full py-3 bg-gradient-primary text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                                    发送消息
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="bg-dark text-white py-12">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">鲍龙云</h3>
-                    <p class="text-gray-400 mb-6">高级产品管理 | AI产品专家 | 用户增长策略师</p>
-                    <div class="flex space-x-4">
-                        <a href="https://v.douyin.com/xqwAjYFySos/%202@7.com%20:9pm" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19.707 13.707c-.515-2.572-1.268-5.108-2.256-7.593a1.993 1.993 0 0 0-1.921-1.114c-1.514.156-3.02.768-4.43 1.807C8.693 3.761 6.218 4.347 4.527 5.27a1.983 1.983 0 0 0-1.247 1.757c-.235 2.567.261 5.147 1.246 7.612-.957.78-1.745 1.707-2.364 2.777a1.985 1.985 0 0 0 .63 2.686c.667.48 1.465.74 2.294.74 2.294 0 4.534-.804 6.338-2.234.785.133 1.585.202 2.397.202 1.514 0 3.022-.244 4.455-.724a1.993 1.993 0 0 0 2.242-1.82c.407-1.496.611-3.022.611-4.557 0-.738-.047-1.468-.14-2.192zm-5.878-3.388c.806 0 1.502-.696 1.502-1.502 0-.806-.696-1.502-1.502-1.502-.806 0-1.502.696-1.502 1.502 0 .806.696 1.502 1.502 1.502zm-4.506 0c.806 0 1.502-.696 1.502-1.502 0-.806-.696-1.502-1.502-1.502-.806 0-1.502.696-1.502 1.502 0 .806.696 1.502 1.502 1.502z"/>
+                <div class="certification-cards">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7" />
+                                <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
                             </svg>
-                        </a>
-                        <a href="https://doubao.com/bot/eYfSvZcp" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-2.69 1.4-5.09 3.56-6.44l.6.6c1.84-1.2 3.96-1.86 6.15-1.86 3.31 0 6 2.69 6 6 0 3.31-2.69 6-6 6zm-4.5-9.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm-2.5 5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                        </div>
+                        <h4>PMP项目管理认证</h4>
+                        <p>Project Management Professional</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M9 3v18M3 9h18M3 15h18M15 3v18" />
                             </svg>
-                        </a>
+                        </div>
+                        <h4>微软人工智能证书</h4>
+                        <p>Microsoft AI-900</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                        </div>
+                        <h4>英语四级证书</h4>
+                        <p>CET-4</p>
                     </div>
                 </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">关于我</a></li>
-                        <li><a href="#experience" class="text-gray-400 hover:text-white transition-colors duration-300">工作经历</a></li>
-                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors duration-300">项目成果</a></li>
-                        <li><a href="#education" class="text-gray-400 hover:text-white transition-colors duration-300">教育背景</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">联系方式</a></li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">联系方式</h2>
+                <p class="section-subtitle">期待与您的合作机会</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>邮箱</h4>
+                            <a href="mailto:longyun.bao@foxmail.com">longyun.bao@foxmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>电话</h4>
+                            <a href="tel:17717032695">177 1703 2695</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path
+                                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>个人网站</h4>
+                            <a href="https://longyun.pages.dev/" target="_blank"
+                                rel="noopener noreferrer">longyun.pages.dev</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>期望城市</h4>
+                            <p>上海</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">联系信息</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-3 mt-1"><use xlink:href="#icon-mail"></use></svg>
-                            <span class="text-gray-400">longyun.bao@foxmail.com</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-3 mt-1"><use xlink:href="#icon-phone"></use></svg>
-                            <span class="text-gray-400">17717032695</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-3 mt-1"><use xlink:href="#icon-map-pin"></use></svg>
-                            <span class="text-gray-400">上海市</span>
-                        </li>
-                    </ul>
+
+                <div class="contact-summary">
+                    <div class="summary-card">
+                        <h3>求职意向</h3>
+                        <div class="summary-item">
+                            <span class="label">职位：</span>
+                            <span class="value">高级产品经理</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">期望薪资：</span>
+                            <span class="value">30-35K</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">工作经验：</span>
+                            <span class="value">14年</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">出生年月：</span>
+                            <span class="value">1989年10月</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 鲍龙云. 保留所有权利.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">隐私政策</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">使用条款</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Cookie政策</a>
-                </div>
-            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2024</span> 鲍龙云. All rights reserved.</p>
+            <p class="footer-subtitle">Built with passion for product excellence</p>
         </div>
     </footer>
 
-    <!-- 回到顶部按钮 -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 focus:outline-none z-20">
-        <svg class="w-5 h-5"><use xlink:href="#icon-chevron-up"></use></svg>
-    </button>
-
-    <!-- JavaScript -->
-    <script>
-        // SVG图标不需要初始化
-        
-        // 移动端菜单切换
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // 导航栏滚动效果
-        const navbar = document.getElementById('navbar');
-        let lastScrollTop = 0;
-        
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > 50) {
-                navbar.classList.add('shadow-md');
-                navbar.classList.remove('bg-white/90');
-                navbar.classList.add('bg-white');
-            } else {
-                navbar.classList.remove('shadow-md');
-                navbar.classList.add('bg-white/90');
-                navbar.classList.remove('bg-white');
-            }
-            
-            lastScrollTop = scrollTop;
-            
-            // 控制回到顶部按钮的显示/隐藏
-            const backToTop = document.getElementById('back-to-top');
-            if (scrollTop > 300) {
-                backToTop.classList.remove('opacity-0', 'invisible');
-                backToTop.classList.add('opacity-100', 'visible');
-            } else {
-                backToTop.classList.add('opacity-0', 'invisible');
-                backToTop.classList.remove('opacity-100', 'visible');
-            }
-        });
-        
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                // 关闭移动端菜单
-                mobileMenu.classList.add('hidden');
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const navbarHeight = navbar.offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // 回到顶部按钮
-        document.getElementById('back-to-top').addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // 表单提交
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // 这里可以添加表单验证和提交逻辑
-                alert('感谢您的留言！我会尽快回复您。');
-                contactForm.reset();
-            });
-        }
-        
-        // 项目卡片动画
-        const projectCards = document.querySelectorAll('#projects .bg-gray-50');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        
-        projectCards.forEach(card => {
-            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
-            observer.observe(card);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
